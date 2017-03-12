@@ -1,5 +1,7 @@
 package Interface;
 
+import Entities.Enum.Panels;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,11 +14,17 @@ import java.awt.event.ActionListener;
  * @version 1.0
  */
 public class Menu extends JPanel implements ActionListener{
-    JButton play = new JButton("Play");
-    JButton exit = new JButton("Exit");
+    private JButton play = new JButton("Play");
+    private JButton exit = new JButton("Exit");
+    private Window window;
 
-    public Menu()
+    public Menu(Window window)
     {
+
+        this.window = window;
+
+        //this.setBorder(BorderFactory.createEmptyBorder(screenSize.width/8,screenSize.width/8,screenSize.width/8,screenSize.width/8));
+
         this.setLayout(new GridLayout(5,0));
         this.add(new Box(0));
         this.add(play);
@@ -33,6 +41,10 @@ public class Menu extends JPanel implements ActionListener{
         if(e.getSource() == exit)
         {
             System.exit(0);
+        }
+        else if(e.getSource() == play)
+        {
+            this.window.changePanel(Panels.game);
         }
     }
 

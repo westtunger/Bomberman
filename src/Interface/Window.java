@@ -2,6 +2,7 @@ package Interface;
 
 import Entities.Classes.*;
 import Entities.Enum.Direction;
+import Entities.Enum.Panels;
 import Entities.Enum.PowerUpTypes;
 
 import javax.swing.*;
@@ -14,8 +15,9 @@ import java.awt.*;
  * @version 1.0
  */
 public class Window extends JFrame{
-    PlayGround playGround = new PlayGround();
 
+    private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    PlayGround pg = new PlayGround();
 
     public Window()
     {
@@ -24,7 +26,7 @@ public class Window extends JFrame{
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.setContentPane(playGround);
+        this.getContentPane().add(new Menu(this));
         this.setVisible(true);
 
         Player p1 = new Player(0,"Test",new Point(10,10));
@@ -36,8 +38,32 @@ public class Window extends JFrame{
         PowerUp pu1 = new PowerUp(PowerUpTypes.power,new Point(300,10));
         PowerUp pu2 = new PowerUp(PowerUpTypes.speed,new Point(300,150));
         PowerUp pu3 = new PowerUp(PowerUpTypes.bomb,new Point(300,300));
+    }
 
-        play();
+    public void changePanel(Panels panel)
+    {
+        this.getContentPane().removeAll();
+
+        switch (panel)
+        {
+            case game:
+                this.getContentPane().add(pg);
+                this.revalidate();
+                this.repaint();
+                break;
+
+            case menu:
+                this.setContentPane(new Menu(this));
+                break;
+
+            case scoreboard:
+
+                break;
+
+            default:
+
+                break;
+        }
     }
 
     public void play()
@@ -46,7 +72,7 @@ public class Window extends JFrame{
         while(i <= 1000)
         {
             i++;
-            playGround.repaint();
+            pg.repaint();
 
             try {
                 Thread.sleep(1000/30);
