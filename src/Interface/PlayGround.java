@@ -27,7 +27,8 @@ public class PlayGround extends JPanel{
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        ArrayList<Entity> entities = Entity.getEntities();
+        //Copy the collection to avoid possible java.util.ConcurrentModificationException
+        ArrayList<Entity> entities = new ArrayList<>(Entity.getEntities());
 
         for (Entity entity : entities)
         {
