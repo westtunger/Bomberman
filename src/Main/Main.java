@@ -1,7 +1,9 @@
+package Main;
+
 import Interface.Window;
 
 /**
- * Main class.
+ * Main.Main class.
  *
  * @author Nicolas Viseur
  * @version 1.0

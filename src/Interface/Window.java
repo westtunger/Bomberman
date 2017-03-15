@@ -2,6 +2,7 @@ package Interface;
 
 import Entities.Classes.*;
 import Entities.Enum.Direction;
+import Entities.Enum.Images;
 import Entities.Enum.Panels;
 import Entities.Enum.PowerUpTypes;
 
@@ -17,27 +18,21 @@ import java.awt.*;
 public class Window extends JFrame{
 
     private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    PlayGround pg = new PlayGround();
+    public static final Dimension windowSize = new Dimension();
+    PlayGround pg;
 
     public Window()
     {
         this.setTitle("Bomberman V1.0 By Nicolas Viseur");
-        this.setSize(600,600);
+        windowSize.setSize((int)(screenSize.getHeight()-screenSize.getHeight()/10),(int)(screenSize.getHeight()-screenSize.getHeight()/10));
+        pg = new PlayGround(0);
+        this.setSize(windowSize);
+        this.isAlwaysOnTop();
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.getContentPane().add(new Menu(this));
         this.setVisible(true);
-
-        Player p1 = new Player(0,"Test",new Point(10,10));
-        Player p2 = new Player(1,"Test",new Point(10,150));
-        Wall w1 = new Wall(false,new Point(150,10));
-        Wall w2 = new Wall(true,new Point(150,150));
-        Bomb b1 = new Bomb(5,new Point(10,300),p1);
-        Explosion f1 = new Explosion(10, Direction.down,new Point(150,300));
-        PowerUp pu1 = new PowerUp(PowerUpTypes.power,new Point(300,10));
-        PowerUp pu2 = new PowerUp(PowerUpTypes.speed,new Point(300,150));
-        PowerUp pu3 = new PowerUp(PowerUpTypes.bomb,new Point(300,300));
     }
 
     public void changePanel(Panels panel)
@@ -50,6 +45,7 @@ public class Window extends JFrame{
                 this.getContentPane().add(pg);
                 this.revalidate();
                 this.repaint();
+                pg.play();
                 break;
 
             case menu:
