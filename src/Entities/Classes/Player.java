@@ -2,6 +2,8 @@ package Entities.Classes;
 
 import Entities.Enum.Direction;
 import Entities.Enum.Images;
+import Interface.*;
+import Interface.Window;
 
 import java.awt.*;
 
@@ -13,12 +15,12 @@ import java.awt.*;
  */
 public class Player extends Entity
 {
-    private int power = 1;
+    private int power = 2;
     private int nbBombMax = 1;
     private int speed = 1;
     private int nbBombPlaced = 0;
     private int playerNumber;
-    private Direction dir;
+    private Direction dir = Direction.down;
     private boolean isAlive = true;
 
     public Player(int playerNumber,String name, Point position){
@@ -39,8 +41,37 @@ public class Player extends Entity
      */
     public void plant()
     {
-        addEntity(new Bomb(this.power,this.move(dir,1),this));
-        this.augmentNbBombPlaced();
+        if(this.nbBombPlaced<this.nbBombMax)
+        {
+            addEntity(new Bomb(this.power,this.getSpot(this.dir),this));
+            this.augmentNbBombPlaced();
+        }
+    }
+
+
+
+    public void move(Direction dir)
+    {
+        this.dir = dir;
+        super.move(dir,this.speed);
+        switch (dir)
+        {
+            case down:
+                this.setImages(Images.playerOneFront);
+                break;
+
+            case left:
+                this.setImages(Images.playerOneLeft);
+                break;
+
+            case right:
+                this.setImages(Images.playerOneRight);
+                break;
+
+            case up:
+                this.setImages(Images.playerOneBack);
+                break;
+        }
     }
 
     /**

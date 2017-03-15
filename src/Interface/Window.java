@@ -8,6 +8,8 @@ import Entities.Enum.PowerUpTypes;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 /**
  * Window Class.
@@ -18,14 +20,15 @@ import java.awt.*;
 public class Window extends JFrame{
 
     private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    public static final Dimension windowSize = new Dimension();
-    PlayGround pg;
+    private static final Dimension windowSize = new Dimension();
+    private PlayGround pg;
 
     public Window()
     {
         this.setTitle("Bomberman V1.0 By Nicolas Viseur");
         windowSize.setSize((int)(screenSize.getHeight()-screenSize.getHeight()/10),(int)(screenSize.getHeight()-screenSize.getHeight()/10));
         pg = new PlayGround(0);
+        this.addKeyListener(pg);
         this.setSize(windowSize);
         this.isAlwaysOnTop();
         this.setLocationRelativeTo(null);
@@ -45,6 +48,8 @@ public class Window extends JFrame{
                 this.getContentPane().add(pg);
                 this.revalidate();
                 this.repaint();
+                //Get the focus so we can listen to the keyboard
+                this.requestFocusInWindow();
                 pg.play();
                 break;
 
@@ -62,19 +67,10 @@ public class Window extends JFrame{
         }
     }
 
-    public void play()
+    public static Dimension getWindowSize()
     {
-        int i =0;
-        while(i <= 1000)
-        {
-            i++;
-            pg.repaint();
-
-            try {
-                Thread.sleep(1000/30);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        return windowSize;
     }
+
+
 }

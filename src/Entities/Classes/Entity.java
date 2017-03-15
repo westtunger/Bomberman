@@ -2,6 +2,8 @@ package Entities.Classes;
 
 import Entities.Enum.Direction;
 import Entities.Enum.Images;
+import Interface.*;
+import Interface.Window;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -72,6 +74,32 @@ public abstract class Entity{
      */
     public Point move(Direction direction, int speed) {
         return new Point(this.getPosition().x += direction.getDirection().getX()*speed,this.getPosition().y += direction.getDirection().getY()*speed);
+    }
+
+    public Point getSpot(Direction dir)
+    {
+        Point pos = null;
+
+        switch (dir)
+        {
+            case up:
+                pos = new Point(this.getPosition().x,this.getPosition().y- Window.getWindowSize().width/15);
+                break;
+
+            case right:
+                pos = new Point(this.getPosition().x+ Window.getWindowSize().width/15,this.getPosition().y);
+                break;
+
+            case left:
+                pos = new Point(this.getPosition().x- Window.getWindowSize().width/15,this.getPosition().y);
+                break;
+
+            case down:
+                pos = new Point(this.getPosition().x,this.getPosition().y+ Window.getWindowSize().width/15);
+                break;
+        }
+
+        return pos;
     }
 
     /**

@@ -14,13 +14,14 @@ import java.awt.*;
 public class Bomb extends Entity {
 
     private int power;
-    private int timer = 10;
+    private int timer = 50;
     private Player owner;
 
     public Bomb(int power, Point pos, Player owner)
     {
         super("Bomb",pos, Images.bomb);
         this.power = power;
+        this.owner = owner;
     }
 
     @Override
@@ -37,10 +38,10 @@ public class Bomb extends Entity {
      */
     private void explode()
     {
-        addEntity(new Explosion(this.power, Direction.up,this.move(Direction.up,1)));
-        addEntity(new Explosion(this.power, Direction.right,this.move(Direction.right,1)));
-        addEntity(new Explosion(this.power, Direction.down,this.move(Direction.down,1)));
-        addEntity(new Explosion(this.power, Direction.left,this.move(Direction.left,1)));
+        addEntity(new Explosion(this.power, Direction.up,this.getSpot(Direction.up)));
+        addEntity(new Explosion(this.power, Direction.right,this.getSpot(Direction.right)));
+        addEntity(new Explosion(this.power, Direction.down,this.getSpot(Direction.down)));
+        addEntity(new Explosion(this.power, Direction.left,this.getSpot(Direction.left)));
 
         owner.reduceNbBombPlaced();
 

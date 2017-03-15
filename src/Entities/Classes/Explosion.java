@@ -27,8 +27,12 @@ public class Explosion extends Entity {
     @Override
     public void tick()
     {
+        this.power--;
+
         if(this.power > 0)
+        {
             this.extend();
+        }
 
         this.destroy();
     }
@@ -38,6 +42,6 @@ public class Explosion extends Entity {
      */
     public void extend()
     {
-        addEntity(new Explosion(this.power--, this.dir,this.move(this.dir,1)));
+        addEntity(new Explosion(this.power, this.dir,this.getSpot(this.dir)));
     }
 }
