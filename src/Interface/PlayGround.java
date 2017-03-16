@@ -34,7 +34,7 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
     int i = 0;
     ArrayList<Entity> entities = null;
     ArrayList<Integer> keys= new ArrayList<>();
-    Timer t = new Timer(100,this);
+    Timer t = new Timer(50,this);
 
     public PlayGround(int level)
     {
@@ -122,20 +122,6 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
             Entity.getEntities().get(j).tick();
         }
 
-        if(i>=10000)
-            t.stop();
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        if(!keys.contains(e.getKeyCode()))
-            keys.add(e.getKeyCode());
-
         for(int code : keys)
         {
             switch (code)
@@ -181,6 +167,20 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
                     break;
             }
         }
+
+        if(i>=10000)
+            t.stop();
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if(!keys.contains(e.getKeyCode()))
+            keys.add(e.getKeyCode());
     }
 
     @Override

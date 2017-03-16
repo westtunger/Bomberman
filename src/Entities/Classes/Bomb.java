@@ -16,7 +16,6 @@ public class Bomb extends Entity {
     private int power;
     private int timer = 25;
     private Player owner;
-    private boolean exploded = false;
 
     public Bomb(int power, Point pos, Player owner)
     {
@@ -30,7 +29,7 @@ public class Bomb extends Entity {
     {
         if(this.timer > 0)
             this.timer--;
-        else if(!this.exploded)
+        else
             this.explode();
     }
 
@@ -39,7 +38,6 @@ public class Bomb extends Entity {
      */
     private void explode()
     {
-        this.exploded = true;
         new Explosion(this.power, Direction.up,this.getSpot(Direction.up));
         new Explosion(this.power, Direction.right,this.getSpot(Direction.right));
         new Explosion(this.power, Direction.down,this.getSpot(Direction.down));
