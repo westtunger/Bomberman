@@ -33,6 +33,7 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
     Player playerTwo;
     int i = 0;
     ArrayList<Entity> entities = null;
+    ArrayList<Integer> keys= new ArrayList<>();
     Timer t = new Timer(100,this);
 
     public PlayGround(int level)
@@ -132,31 +133,57 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
 
     @Override
     public void keyPressed(KeyEvent e) {
-        switch (e.getKeyCode())
+        keys.removeIf(i -> i == e.getKeyCode());
+        keys.add(e.getKeyCode());
+        for(int code : keys)
         {
-            case KeyEvent.VK_S:
-                playerOne.move(Direction.down);
-                break;
+            switch (code)
+            {
+                case KeyEvent.VK_S:
+                    playerOne.move(Direction.down);
+                    break;
 
-            case KeyEvent.VK_Z:
-                playerOne.move(Direction.up);
-                break;
+                case KeyEvent.VK_Z:
+                    playerOne.move(Direction.up);
+                    break;
 
-            case KeyEvent.VK_Q:
-                playerOne.move(Direction.left);
-                break;
+                case KeyEvent.VK_Q:
+                    playerOne.move(Direction.left);
+                    break;
 
-            case KeyEvent.VK_D:
-                playerOne.move(Direction.right);
-                break;
+                case KeyEvent.VK_D:
+                    playerOne.move(Direction.right);
+                    break;
 
-            case KeyEvent.VK_SPACE:
-                playerOne.plant();
-                break;
+                case KeyEvent.VK_SPACE:
+                    playerOne.plant();
+                    break;
+
+                case KeyEvent.VK_DOWN:
+                    playerTwo.move(Direction.down);
+                    break;
+
+                case KeyEvent.VK_UP:
+                    playerTwo.move(Direction.up);
+                    break;
+
+                case KeyEvent.VK_LEFT:
+                    playerTwo.move(Direction.left);
+                    break;
+
+                case KeyEvent.VK_RIGHT:
+                    playerTwo.move(Direction.right);
+                    break;
+
+                case KeyEvent.VK_NUMPAD0:
+                    playerTwo.plant();
+                    break;
+            }
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
+        keys.removeIf(i -> i == e.getKeyCode());
     }
 }

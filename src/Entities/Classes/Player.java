@@ -15,9 +15,9 @@ import java.awt.*;
  */
 public class Player extends Entity
 {
-    private int power = 2;
+    private int power = 1;
     private int nbBombMax = 1;
-    private int speed = 1;
+    private int speed = 3;
     private int nbBombPlaced = 0;
     private int playerNumber;
     private Direction dir = Direction.down;
@@ -54,24 +54,45 @@ public class Player extends Entity
     {
         this.dir = dir;
         super.move(dir,this.speed);
-        switch (dir)
-        {
-            case down:
-                this.setImages(Images.playerOneFront);
-                break;
+        if(this.playerNumber == 0)
+            switch (dir)
+            {
+                case down:
+                    this.setImages(Images.playerOneFront);
+                    break;
 
-            case left:
-                this.setImages(Images.playerOneLeft);
-                break;
+                case left:
+                    this.setImages(Images.playerOneLeft);
+                    break;
 
-            case right:
-                this.setImages(Images.playerOneRight);
-                break;
+                case right:
+                    this.setImages(Images.playerOneRight);
+                    break;
 
-            case up:
-                this.setImages(Images.playerOneBack);
-                break;
-        }
+                case up:
+                    this.setImages(Images.playerOneBack);
+                    break;
+            }
+        else
+            switch (dir)
+            {
+                case down:
+                    this.setImages(Images.playerTwoFront);
+                    break;
+
+                case left:
+                    this.setImages(Images.playerTwoLeft);
+                    break;
+
+                case right:
+                    this.setImages(Images.playerTwoRight);
+                    break;
+
+                case up:
+                    this.setImages(Images.playerTwoBack);
+                    break;
+            }
+
     }
 
     /**
