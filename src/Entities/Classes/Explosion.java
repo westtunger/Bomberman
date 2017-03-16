@@ -14,6 +14,7 @@ import java.awt.*;
 public class Explosion extends Entity {
 
     int power;
+    int timer = 15;
     Direction dir;
 
     public Explosion(int power, Direction dir, Point pos)
@@ -27,14 +28,18 @@ public class Explosion extends Entity {
     @Override
     public void tick()
     {
+        this.timer--;
+
         this.power--;
 
-        if(this.power > 0)
-        {
+        if (this.power > 0) {
             this.extend();
         }
 
-        this.destroy();
+        if(this.timer <= 0)
+        {
+            this.destroy();
+        }
     }
 
     /**
@@ -42,6 +47,6 @@ public class Explosion extends Entity {
      */
     public void extend()
     {
-        addEntity(new Explosion(this.power, this.dir,this.getSpot(this.dir)));
+        new Explosion(this.power, this.dir,this.getSpot(this.dir));
     }
 }

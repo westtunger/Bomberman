@@ -122,7 +122,7 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
             Entity.getEntities().get(j).tick();
         }
 
-        if(i>=1000)
+        if(i>=10000)
             t.stop();
     }
 
@@ -133,8 +133,9 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
 
     @Override
     public void keyPressed(KeyEvent e) {
-        keys.removeIf(i -> i == e.getKeyCode());
-        keys.add(e.getKeyCode());
+        if(!keys.contains(e.getKeyCode()))
+            keys.add(e.getKeyCode());
+
         for(int code : keys)
         {
             switch (code)

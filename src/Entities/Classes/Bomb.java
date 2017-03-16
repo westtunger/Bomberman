@@ -14,8 +14,9 @@ import java.awt.*;
 public class Bomb extends Entity {
 
     private int power;
-    private int timer = 50;
+    private int timer = 25;
     private Player owner;
+    private boolean exploded = false;
 
     public Bomb(int power, Point pos, Player owner)
     {
@@ -29,7 +30,7 @@ public class Bomb extends Entity {
     {
         if(this.timer > 0)
             this.timer--;
-        else
+        else if(!this.exploded)
             this.explode();
     }
 
@@ -38,10 +39,11 @@ public class Bomb extends Entity {
      */
     private void explode()
     {
-        addEntity(new Explosion(this.power, Direction.up,this.getSpot(Direction.up)));
-        addEntity(new Explosion(this.power, Direction.right,this.getSpot(Direction.right)));
-        addEntity(new Explosion(this.power, Direction.down,this.getSpot(Direction.down)));
-        addEntity(new Explosion(this.power, Direction.left,this.getSpot(Direction.left)));
+        this.exploded = true;
+        new Explosion(this.power, Direction.up,this.getSpot(Direction.up));
+        new Explosion(this.power, Direction.right,this.getSpot(Direction.right));
+        new Explosion(this.power, Direction.down,this.getSpot(Direction.down));
+        new Explosion(this.power, Direction.left,this.getSpot(Direction.left));
 
         owner.reduceNbBombPlaced();
 

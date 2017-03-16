@@ -15,7 +15,7 @@ import java.awt.*;
  */
 public class Player extends Entity
 {
-    private int power = 1;
+    private int power = 2;
     private int nbBombMax = 1;
     private int speed = 3;
     private int nbBombPlaced = 0;
@@ -33,7 +33,6 @@ public class Player extends Entity
     @Override
     public void tick()
     {
-
     }
 
     /**
@@ -43,12 +42,10 @@ public class Player extends Entity
     {
         if(this.nbBombPlaced<this.nbBombMax)
         {
-            addEntity(new Bomb(this.power,this.getSpot(this.dir),this));
             this.augmentNbBombPlaced();
+            new Bomb(this.power,this.getSpot(this.dir),this);
         }
     }
-
-
 
     public void move(Direction dir)
     {
@@ -162,7 +159,7 @@ public class Player extends Entity
      * Augment the number of bom already placed by the player.
      */
     public void augmentNbBombPlaced() {
-        if(this.nbBombPlaced+1 <= this.getNbBombMax())
+        if(this.nbBombPlaced < this.getNbBombMax())
             this.nbBombPlaced++;
     }
 
@@ -170,7 +167,8 @@ public class Player extends Entity
      * Reduce the number of bom already placed by the player.
      */
     public void reduceNbBombPlaced() {
-        this.nbBombPlaced--;
+        if(this.nbBombPlaced > 0)
+            this.nbBombPlaced--;
     }
 
     /**

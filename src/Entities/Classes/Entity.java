@@ -26,7 +26,7 @@ public abstract class Entity{
         this.position = position;
         this.images = images;
         this.imageIndex = 0;
-        addEntity(this);
+        entities.add(this);
     }
 
     /**
@@ -100,15 +100,6 @@ public abstract class Entity{
         }
 
         return pos;
-    }
-
-    /**
-     * Add a new entity to the game.
-     * @param entity the entity to add.
-     */
-    public static void addEntity(Entity entity)
-    {
-        entities.add(entity);
     }
 
     /**
