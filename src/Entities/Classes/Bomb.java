@@ -27,6 +27,9 @@ public class Bomb extends Entity {
         checkIfPlantAllowed();
     }
 
+    /**
+     * Look if there is no entity in front of the player, to be sure that he can plant the bomb.
+     */
     private void checkIfPlantAllowed()
     {
         for(int i = 0; i<Entity.getEntities().size();i++)
@@ -63,6 +66,7 @@ public class Bomb extends Entity {
         this.destroy();
     }
 
+    @Override
     public void changeImageIndex() {
         int index = this.getImageIndex();
 
@@ -76,6 +80,7 @@ public class Bomb extends Entity {
         }
     }
 
+    @Override
     public Rectangle getBBox()
     {
         return new Rectangle(this.getPosition().x,this.getPosition().y, Window.getWindowSize().width/20,Window.getWindowSize().width/20);

@@ -75,6 +75,9 @@ class PlayGround extends JPanel implements ActionListener, KeyListener{
         }
     }
 
+    /**
+     * Place all the entity on the map according the pattern in the levelX.txt file.
+     */
     private void createLevel()
     {
         String[] array = new String[]{};
@@ -119,6 +122,10 @@ class PlayGround extends JPanel implements ActionListener, KeyListener{
         }
     }
 
+    /**
+     * Start the timer to launch the game loop.
+     * @see Timer
+     */
     public void play()
     {
         t.start();

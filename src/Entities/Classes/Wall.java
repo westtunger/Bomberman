@@ -24,8 +24,8 @@ public class Wall extends Entity{
     }
 
     /**
-     * Return the images needed in function of the wall
-     * @param breakable the possibility to break the wall
+     * Return the images needed in function of the wall.
+     * @param breakable the possibility to break the wall.
      */
     private Images getWallImages(boolean breakable)
     {
@@ -40,11 +40,16 @@ public class Wall extends Entity{
 
     }
 
+    /**
+     * Tell if the wall is breakable or not.
+     * @return true if the wall can be break.
+     */
     public boolean isBreakable()
     {
         return this.isBreakable;
     }
 
+    @Override
     public void destroy()
     {
         int dropPowerUp = (int)(Math.random()*100);

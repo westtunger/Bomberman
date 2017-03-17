@@ -30,6 +30,11 @@ public class Window extends JFrame{
         this.setVisible(true);
     }
 
+    /**
+     * Change the panel actually showing on the screen.
+     * @param panel the panel to use.
+     * @see Panels
+     */
     public void changePanel(Panels panel)
     {
         this.getContentPane().removeAll();
@@ -64,6 +69,12 @@ public class Window extends JFrame{
         }
     }
 
+    /**
+     * Give the dimensions of the window.
+     *
+     * @return the dimensions of the window
+     * @see Dimension
+     */
     public static Dimension getWindowSize()
     {
         return windowSize;

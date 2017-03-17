@@ -44,6 +44,11 @@ public class Player extends Entity
         }
     }
 
+    /**
+     * Move the player in the given direction, according to his speed.
+     * @param dir the direction to move in.
+     * @see Direction
+     */
     public void move(Direction dir)
     {
         this.dir = dir;
@@ -92,6 +97,7 @@ public class Player extends Entity
     /**
      * Return the images needed in function of the player number.
      * @param number the number of the player.
+     * @return the images needed.
      */
     private Images getPlayerImages(int number)
     {
@@ -101,10 +107,8 @@ public class Player extends Entity
             return Images.playerTwoFront;
     }
 
-    //Getters, setters and modifiers
-
     /**
-     * Augment the power of the bomb planted by the player.
+     * Augment the power of the bomb who can be planted by the player.
      */
     public void augmentPower() {
         if(this.power <5)
@@ -112,14 +116,14 @@ public class Player extends Entity
     }
 
     /**
-     * Return the maximum number od bomb usable at the same time.
+     * Return the maximum number of bomb usable at the same time by the player.
      */
     private int getNbBombMax() {
         return nbBombMax;
     }
 
     /**
-     * Augment the max number of bomb usable at the same time.
+     * Augment the maximum number of bomb usable at the same time by the player.
      */
     public void augmentNbBombMax() {
         if(this.nbBombMax < 5)
@@ -151,24 +155,33 @@ public class Player extends Entity
     }
 
     /**
-     * Return the player number.
+     * Give the player number.
+     *
+     * @return the player number.
      */
     public int getPlayerNumber() {
         return playerNumber;
     }
 
+    /**
+     * Give the direction of the player.
+     * @return the direction of the player.
+     * @see Direction
+     */
     public Direction getDir()
     {
         return this.dir;
     }
+
     /**
      * Set the player number.
-     * @param playerNumber the number of the player
+     * @param playerNumber the number of the player.
      */
     private void setPlayerNumber(int playerNumber) {
         this.playerNumber = playerNumber;
     }
 
+    @Override
     public Rectangle getBBox()
     {
         return new Rectangle(this.getPosition().x,this.getPosition().y, Interface.Window.getWindowSize().width/20, Interface.Window.getWindowSize().width/20);

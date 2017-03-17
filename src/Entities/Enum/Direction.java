@@ -24,6 +24,7 @@ public enum Direction {
      * Return the information needed to move in this direction.
      *
      * @see Point
+     * @return the information on this direction.
      */
     public Point getDirection()
     {

@@ -36,14 +36,15 @@ public abstract class Entity{
     }
 
     /**
-     * Return the name of the entity.
+     * Give the name of the entity.
+     * @return the name of the entity.
      */
     public String getName() {
         return this.name;
     }
 
     /**
-     * Set the image of the entity
+     * Set the image of the entity.
      * @param images the image to use.
      */
     void setImages(Images images) {
@@ -52,6 +53,7 @@ public abstract class Entity{
 
     /**
      * Return the actual position of the entity.
+     * @return the position of the entity.
      */
     public Point getPosition() {
         return this.position;
@@ -59,6 +61,7 @@ public abstract class Entity{
 
     /**
      * Return the ArrayList containing all the images used by the entity.
+     * @return The images of the entity.
      * @see ArrayList
      */
     public Images getImageEnum() {
@@ -67,7 +70,7 @@ public abstract class Entity{
 
     /**
      * Return a new position moved in a given direction according to his speed.
-     *  @param  direction  the direction where the entity should go.
+     * @param  direction  the direction where the entity should go.
      * @param  speed the speed of the movement.
      */
     void move(Direction direction, int speed) {
@@ -75,6 +78,12 @@ public abstract class Entity{
         this.getPosition().y += direction.getDirection().getY()*speed;
     }
 
+    /**
+     * Directly set the position of the entity.
+     * Only to use with collision.
+     * @param x the x coordinate of the entity.
+     * @param y the y coordinate of the entity.
+     */
     public void setPosition(int x, int y)
     {
         this.position.x = x;
@@ -82,12 +91,23 @@ public abstract class Entity{
         this.position.y = y;
     }
 
-
+    /**
+     * Check if there is a collision between this entity and another.
+     * @param entity the entity to compare.
+     * @return true if there is a collision.
+     */
     public boolean checkCollision(Entity entity)
     {
         return this.getBBox().intersects(entity.getBBox());
     }
 
+    /**
+     * Give the spot that face the entity to allow to place it something.
+     * @param dir the direction the entity is facing.
+     * @return the spot the face the entity.
+     * @see Point
+     * @see Direction
+     */
     Point getSpot(Direction dir)
     {
         Point pos = null;
@@ -121,6 +141,7 @@ public abstract class Entity{
 
     /**
      * Change the index of the image used by the entity to play an animation.
+     * @see Images
      */
     public void changeImageIndex() {
         if(imageIndex < this.getImageEnum().getImages().length-1)
@@ -129,26 +150,48 @@ public abstract class Entity{
             this.imageIndex=0;
     }
 
+    /**
+     * Give the List containing all the created entity.
+     * @return the list with all the created entity.
+     * @see ArrayList
+     */
     public static ArrayList<Entity> getEntities()
     {
         return entities;
     }
 
+    /**
+     * Give the actual image index of the entity.
+     * @return image index of the entity.
+     * @see Images
+     */
     public int getImageIndex()
     {
         return this.imageIndex;
     }
 
+    /**
+     * Set the image index of the entity.
+     */
     void setImageIndex(int imageIndex)
     {
         this.imageIndex = imageIndex;
     }
 
-    Rectangle getBBox()
+    /**
+     * Give the bounding box of the entity.
+     * @return the bounding box of the entity.
+     * @see Rectangle
+     */
+    public Rectangle getBBox()
     {
         return new Rectangle(this.position.x,this.position.y,Window.getWindowSize().width/15,Window.getWindowSize().width/15);
     }
 
+    /**
+     * Clear the List of all the entity, to allow a brand new game to start.
+     * @see ArrayList
+     */
     public static void clear()
     {
         entities.clear();

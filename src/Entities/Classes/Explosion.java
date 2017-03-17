@@ -42,6 +42,7 @@ public class Explosion extends Entity {
         }
     }
 
+    @Override
     public Rectangle getBBox()
     {
         return new Rectangle(this.getPosition().x,this.getPosition().y, Interface.Window.getWindowSize().width/20, Interface.Window.getWindowSize().width/20);

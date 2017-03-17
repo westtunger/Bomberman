@@ -31,6 +31,8 @@ public class PowerUp extends Entity{
     /**
      * Return the images needed in function of the type.
      * @param type the type of the power up.
+     * @return the images needed.
+     * @see PowerUpTypes
      */
     private Images getPowerUpImages(PowerUpTypes type)
     {
@@ -50,6 +52,11 @@ public class PowerUp extends Entity{
         }
     }
 
+    /**
+     * Give the type of this power up.
+     * @return the type of the power up.
+     * @see PowerUpTypes
+     */
     public PowerUpTypes getType()
     {
         return this.type;

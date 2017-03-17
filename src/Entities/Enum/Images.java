@@ -37,6 +37,7 @@ public enum Images {
      * Return the String array of the given entity, with the path of each images.
      *
      * @see ArrayList
+     * @return the images paths.
      */
     public String[] getImages()
     {
