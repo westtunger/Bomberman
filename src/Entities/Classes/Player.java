@@ -2,8 +2,6 @@ package Entities.Classes;
 
 import Entities.Enum.Direction;
 import Entities.Enum.Images;
-import Interface.*;
-import Interface.Window;
 
 import java.awt.*;
 
@@ -95,7 +93,7 @@ public class Player extends Entity
      * Return the images needed in function of the player number.
      * @param number the number of the player.
      */
-    public Images getPlayerImages(int number)
+    private Images getPlayerImages(int number)
     {
         if(number == 0)
             return Images.playerOneFront;
@@ -104,13 +102,6 @@ public class Player extends Entity
     }
 
     //Getters, setters and modifiers
-
-    /**
-     * Return the power of the bomb planted by the player.
-     */
-    public int getPower() {
-        return power;
-    }
 
     /**
      * Augment the power of the bomb planted by the player.
@@ -123,7 +114,7 @@ public class Player extends Entity
     /**
      * Return the maximum number od bomb usable at the same time.
      */
-    public int getNbBombMax() {
+    private int getNbBombMax() {
         return nbBombMax;
     }
 
@@ -136,13 +127,6 @@ public class Player extends Entity
     }
 
     /**
-     * Return the speed of the player
-     */
-    public int getSpeed() {
-        return speed;
-    }
-
-    /**
      * Augment the speed of the player.
      */
     public void augmentSpeed() {
@@ -151,16 +135,9 @@ public class Player extends Entity
     }
 
     /**
-     * Return the number of bomb already placed by the player.
-     */
-    public int getNbBombPlaced() {
-        return nbBombPlaced;
-    }
-
-    /**
      * Augment the number of bom already placed by the player.
      */
-    public void augmentNbBombPlaced() {
+    private void augmentNbBombPlaced() {
         if(this.nbBombPlaced < this.getNbBombMax())
             this.nbBombPlaced++;
     }
@@ -188,7 +165,7 @@ public class Player extends Entity
      * Set the player number.
      * @param playerNumber the number of the player
      */
-    public void setPlayerNumber(int playerNumber) {
+    private void setPlayerNumber(int playerNumber) {
         this.playerNumber = playerNumber;
     }
 

@@ -13,10 +13,10 @@ import java.awt.event.ActionListener;
  * @author Nicolas Viseur
  * @version 1.0
  */
-public class Menu extends JPanel implements ActionListener{
-    private JButton play = new JButton("Play");
-    private JButton exit = new JButton("Exit");
-    private Window window;
+class Menu extends JPanel implements ActionListener{
+    private final JButton play = new JButton("Play");
+    private final JButton exit = new JButton("Exit");
+    private final Window window;
 
     public Menu(Window window)
     {

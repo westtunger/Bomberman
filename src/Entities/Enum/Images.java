@@ -26,7 +26,7 @@ public enum Images {
     bombUp(new String[]{"Sprites/Powerups/PUBomb.png"}),
     unbreakableWall(new String[]{"Sprites/Blocks/SW.png"});
 
-    private String[] images;
+    private final String[] images;
 
     Images(String[] images)
     {

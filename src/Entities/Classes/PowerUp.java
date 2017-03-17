@@ -12,7 +12,7 @@ import java.awt.*;
  * @version 1.0
  */
 public class PowerUp extends Entity{
-    PowerUpTypes type;
+    private final PowerUpTypes type;
 
     public PowerUp(PowerUpTypes type, Point pos)
     {
@@ -32,7 +32,7 @@ public class PowerUp extends Entity{
      * Return the images needed in function of the type.
      * @param type the type of the power up.
      */
-    public Images getPowerUpImages(PowerUpTypes type)
+    private Images getPowerUpImages(PowerUpTypes type)
     {
         switch (type)
         {

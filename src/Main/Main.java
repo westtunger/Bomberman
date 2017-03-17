@@ -8,7 +8,7 @@ import Interface.Window;
  * @author Nicolas Viseur
  * @version 1.0
  */
-public class Main {
+class Main {
 
     public static void main(String[] args)
     {

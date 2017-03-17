@@ -13,7 +13,7 @@ import java.awt.*;
  */
 public class Wall extends Entity{
 
-    boolean isBreakable;
+    private final boolean isBreakable;
 
     public Wall(boolean breakable, Point pos)
     {
@@ -27,7 +27,7 @@ public class Wall extends Entity{
      * Return the images needed in function of the wall
      * @param breakable the possibility to break the wall
      */
-    public Images getWallImages(boolean breakable)
+    private Images getWallImages(boolean breakable)
     {
         if(breakable)
             return Images.breakableWall;

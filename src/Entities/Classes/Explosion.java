@@ -2,10 +2,8 @@ package Entities.Classes;
 
 import Entities.Enum.Direction;
 import Entities.Enum.Images;
-import Interface.*;
 
 import java.awt.*;
-import java.awt.Window;
 
 /**
  * Explosion Class.
@@ -15,9 +13,9 @@ import java.awt.Window;
  */
 public class Explosion extends Entity {
 
-    int power;
-    int timer = 15;
-    Direction dir;
+    private int power;
+    private int timer = 15;
+    private final Direction dir;
 
     public Explosion(int power, Direction dir, Point pos)
     {
@@ -52,7 +50,7 @@ public class Explosion extends Entity {
     /**
      * Extend the explosion area of effect, reducing the power every time.
      */
-    public void extend()
+    private void extend()
     {
         new Explosion(this.power, this.dir,this.getSpot(this.dir));
     }

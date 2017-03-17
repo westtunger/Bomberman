@@ -2,24 +2,23 @@ package Entities.Classes;
 
 import Entities.Enum.Direction;
 import Entities.Enum.Images;
-import Interface.*;
 import Interface.Window;
 
 import java.awt.*;
 import java.util.ArrayList;
 
 /**
- * Entity Object.
+ * Entity Class.
  *
  * @author Nicolas Viseur
  * @version 1.0
  */
 public abstract class Entity{
-    private String name;
-    private Point position;
+    private final String name;
+    private final Point position;
     private Images images;
     private int imageIndex;
-    private static ArrayList<Entity> entities = new ArrayList<>();
+    private static final ArrayList<Entity> entities = new ArrayList<>();
 
     Entity(String name, Point position, Images images) {
         this.name = name;
@@ -47,7 +46,7 @@ public abstract class Entity{
      * Set the image of the entity
      * @param images the image to use.
      */
-    public void setImages(Images images) {
+    void setImages(Images images) {
         this.images = images;
     }
 
@@ -68,12 +67,12 @@ public abstract class Entity{
 
     /**
      * Return a new position moved in a given direction according to his speed.
-     *
-     * @param  direction  the direction where the entity should go.
+     *  @param  direction  the direction where the entity should go.
      * @param  speed the speed of the movement.
      */
-    public Point move(Direction direction, int speed) {
-        return new Point(this.getPosition().x += direction.getDirection().getX()*speed,this.getPosition().y += direction.getDirection().getY()*speed);
+    void move(Direction direction, int speed) {
+        this.getPosition().x += direction.getDirection().getX()*speed;
+        this.getPosition().y += direction.getDirection().getY()*speed;
     }
 
     public void setPosition(int x, int y)
@@ -89,7 +88,7 @@ public abstract class Entity{
         return this.getBBox().intersects(entity.getBBox());
     }
 
-    public Point getSpot(Direction dir)
+    Point getSpot(Direction dir)
     {
         Point pos = null;
 
@@ -140,12 +139,12 @@ public abstract class Entity{
         return this.imageIndex;
     }
 
-    public void setImageIndex(int imageIndex)
+    void setImageIndex(int imageIndex)
     {
         this.imageIndex = imageIndex;
     }
 
-    public Rectangle getBBox()
+    Rectangle getBBox()
     {
         return new Rectangle(this.position.x,this.position.y,Window.getWindowSize().width/15,Window.getWindowSize().width/15);
     }

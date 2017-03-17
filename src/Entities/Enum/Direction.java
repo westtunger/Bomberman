@@ -11,8 +11,8 @@ import java.awt.*;
 public enum Direction {
     up(0,-1), right(1,0), down(0,1), left(-1,0);
 
-    private int x;
-    private  int y;
+    private final int x;
+    private final int y;
 
     Direction(int x, int y)
     {

@@ -1,15 +1,9 @@
 package Interface;
 
-import Entities.Classes.*;
-import Entities.Enum.Direction;
-import Entities.Enum.Images;
 import Entities.Enum.Panels;
-import Entities.Enum.PowerUpTypes;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
 
 /**
  * Window Class.
@@ -19,7 +13,7 @@ import java.awt.event.FocusEvent;
  */
 public class Window extends JFrame{
 
-    private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    private static final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     private static final Dimension windowSize = new Dimension();
     private PlayGround pg;
 

@@ -2,7 +2,6 @@ package Entities.Classes;
 
 import Entities.Enum.Direction;
 import Entities.Enum.Images;
-import Interface.*;
 import Interface.Window;
 
 import java.awt.*;
@@ -15,9 +14,9 @@ import java.awt.*;
  */
 public class Bomb extends Entity {
 
-    private int power;
+    private final int power;
     private int timer = 35;
-    private Player owner;
+    private final Player owner;
 
     public Bomb(int power, Point pos, Player owner)
     {
@@ -28,7 +27,7 @@ public class Bomb extends Entity {
         checkIfPlantAllowed();
     }
 
-    public void checkIfPlantAllowed()
+    private void checkIfPlantAllowed()
     {
         for(int i = 0; i<Entity.getEntities().size();i++)
         {

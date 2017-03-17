@@ -3,13 +3,10 @@ package Interface;
 import Entities.Classes.*;
 import Entities.Enum.Direction;
 import Entities.Enum.Panels;
-import KeyMapping.Key;
-import org.w3c.dom.css.RGBColor;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.Timer;
-import javax.xml.stream.util.StreamReaderDelegate;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -18,8 +15,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Playground Class.
@@ -27,12 +22,11 @@ import java.util.stream.Stream;
  * @author Nicolas Viseur
  * @version 1.0
  */
-public class PlayGround extends JPanel implements ActionListener, KeyListener{
-    Player[] players = new Player[2];
-    ArrayList<Entity> entities = null;
-    ArrayList<Integer> keys= new ArrayList<>();
-    Timer t = new Timer(50,this);
-    Window window;
+class PlayGround extends JPanel implements ActionListener, KeyListener{
+    private final Player[] players = new Player[2];
+    private final ArrayList<Integer> keys= new ArrayList<>();
+    private final Timer t = new Timer(50,this);
+    private final Window window;
 
     public PlayGround(Window window)
     {
@@ -46,7 +40,7 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
         super.paintComponent(g);
 
         //Copy the collection to avoid possible java.util.ConcurrentModificationException
-        entities = new ArrayList<>(Entity.getEntities());
+        ArrayList<Entity> entities = new ArrayList<>(Entity.getEntities());
 
         for (Entity entity : entities)
         {
@@ -81,11 +75,11 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
         }
     }
 
-    public void createLevel()
+    private void createLevel()
     {
         String[] array = new String[]{};
         int mult = Window.getWindowSize().width/15;
-        int nbOfLevels = new File("Levels").list().length;
+        @SuppressWarnings("ConstantConditions") int nbOfLevels = new File("Levels").list().length;
         int id = (int)(Math.random()*nbOfLevels-0.1);
 
         try {
