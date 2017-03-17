@@ -96,19 +96,19 @@ public abstract class Entity{
         switch (dir)
         {
             case up:
-                pos = new Point(this.getPosition().x,this.getPosition().y- Window.getWindowSize().width/15);
+                pos = new Point(this.getPosition().x,this.getPosition().y- Window.getWindowSize().width/20);
                 break;
 
             case right:
-                pos = new Point(this.getPosition().x+ Window.getWindowSize().width/15,this.getPosition().y);
+                pos = new Point(this.getPosition().x+ Window.getWindowSize().width/20,this.getPosition().y);
                 break;
 
             case left:
-                pos = new Point(this.getPosition().x- Window.getWindowSize().width/15,this.getPosition().y);
+                pos = new Point(this.getPosition().x- Window.getWindowSize().width/20,this.getPosition().y);
                 break;
 
             case down:
-                pos = new Point(this.getPosition().x,this.getPosition().y+ Window.getWindowSize().width/15);
+                pos = new Point(this.getPosition().x,this.getPosition().y+ Window.getWindowSize().width/20);
                 break;
         }
 

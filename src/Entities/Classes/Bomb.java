@@ -24,6 +24,20 @@ public class Bomb extends Entity {
         super("Bomb",pos, Images.bomb);
         this.power = power;
         this.owner = owner;
+
+        checkIfPlantAllowed();
+    }
+
+    public void checkIfPlantAllowed()
+    {
+        for(int i = 0; i<Entity.getEntities().size();i++)
+        {
+            if(this.checkCollision(Entity.getEntities().get(i)) && Entity.getEntities().get(i) != this)
+            {
+                owner.reduceNbBombPlaced();
+                this.destroy();
+            }
+        }
     }
 
     @Override
