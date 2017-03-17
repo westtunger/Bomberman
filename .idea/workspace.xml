@@ -6,10 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/Window$1.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Interface/Window$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/Window.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Interface/Window.class" />
+    <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="Add some different levels with kind of different pattern.&#10;The levels are chosen randomly when the game start.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interface/PlayGround.java" afterPath="$PROJECT_DIR$/src/Interface/PlayGround.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interface/Window.java" afterPath="$PROJECT_DIR$/src/Interface/Window.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,14 +25,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Window.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interface/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+            <state relative-caret-position="65">
+              <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
               <folding>
-                <element signature="e#1994#1995#0" expanded="true" />
-                <element signature="e#2027#2028#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
+                <element signature="e#2024#2025#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,14 +48,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="207" column="47" lean-forward="false" selection-start-line="207" selection-start-column="47" selection-end-line="207" selection-end-column="47" />
+            <state relative-caret-position="440">
+              <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
               <folding>
                 <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
-                <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
+                <element signature="method#actionPerformed#0;class#PlayGround#0" expanded="false" />
                 <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
               </folding>
             </state>
@@ -222,8 +221,8 @@
         <option value="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Entity.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
-        <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
         <option value="$PROJECT_DIR$/src/Interface/Window.java" />
+        <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
       </list>
     </option>
   </component>
@@ -329,6 +328,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Sprites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomberman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomberman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Levels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -664,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489764675226</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed replay.">
+      <created>1489764985997</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1489764985997</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -724,7 +744,8 @@
     <MESSAGE value="Remove useless free space in player images." />
     <MESSAGE value="Collision detection when planting bomb so the player can't plant on wall;" />
     <MESSAGE value="First working version of the game(Replay after a game do not work atm)" />
-    <option name="LAST_COMMIT_MESSAGE" value="First working version of the game(Replay after a game do not work atm)" />
+    <MESSAGE value="Fixed replay." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed replay." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,8 +781,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1994#1995#0" expanded="true" />
-            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -807,7 +828,7 @@
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
-            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#PlayGround#0" expanded="false" />
             <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
           </folding>
         </state>
@@ -894,7 +915,7 @@
           <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding>
             <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
-            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#PlayGround#0" expanded="false" />
             <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
           </folding>
         </state>
@@ -934,8 +955,8 @@
         <state relative-caret-position="680">
           <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding>
-            <element signature="e#1994#1995#0" expanded="true" />
-            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1195,25 +1216,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
+    <entry file="file://$PROJECT_DIR$/src/Interface/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="207" column="47" lean-forward="false" selection-start-line="207" selection-start-column="47" selection-end-line="207" selection-end-column="47" />
+        <state relative-caret-position="65">
+          <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
           <folding>
-            <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
-            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
-            <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/Window.java">
+    <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+        <state relative-caret-position="440">
+          <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
           <folding>
-            <element signature="e#1994#1995#0" expanded="true" />
-            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
           </folding>
         </state>
       </provider>

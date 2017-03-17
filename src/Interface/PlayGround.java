@@ -34,9 +34,9 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
     Timer t = new Timer(50,this);
     Window window;
 
-    public PlayGround(int level, Window window)
+    public PlayGround(Window window)
     {
-        this.createLevel(level);
+        this.createLevel();
         this.setBackground(Color.lightGray);
         this.window = window;
     }
@@ -81,10 +81,12 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
         }
     }
 
-    public void createLevel(int id)
+    public void createLevel()
     {
         String[] array = new String[]{};
         int mult = Window.getWindowSize().width/15;
+        int nbOfLevels = new File("Levels").list().length;
+        int id = (int)(Math.random()*nbOfLevels-0.1);
 
         try {
             java.util.List<String> list = Files.readAllLines(Paths.get("Levels/level"+id+".txt"));

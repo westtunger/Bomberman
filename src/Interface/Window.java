@@ -43,7 +43,7 @@ public class Window extends JFrame{
         switch (panel)
         {
             case game:
-                pg = new PlayGround(0, this);
+                pg = new PlayGround(this);
                 this.addKeyListener(pg);
                 this.getContentPane().add(pg);
                 this.revalidate();
