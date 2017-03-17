@@ -2,6 +2,8 @@ package Entities.Classes;
 
 import Entities.Enum.Direction;
 import Entities.Enum.Images;
+import Interface.*;
+import Interface.Window;
 
 import java.awt.*;
 
@@ -14,7 +16,7 @@ import java.awt.*;
 public class Bomb extends Entity {
 
     private int power;
-    private int timer = 25;
+    private int timer = 35;
     private Player owner;
 
     public Bomb(int power, Point pos, Player owner)
@@ -59,5 +61,10 @@ public class Bomb extends Entity {
         {
             this.setImageIndex(2);
         }
+    }
+
+    public Rectangle getBBox()
+    {
+        return new Rectangle(this.getPosition().x,this.getPosition().y, Window.getWindowSize().width/20,Window.getWindowSize().width/20);
     }
 }

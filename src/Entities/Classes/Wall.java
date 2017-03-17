@@ -1,6 +1,7 @@
 package Entities.Classes;
 
 import Entities.Enum.Images;
+import Entities.Enum.PowerUpTypes;
 
 import java.awt.*;
 
@@ -37,5 +38,34 @@ public class Wall extends Entity{
     @Override
     public void tick() {
 
+    }
+
+    public boolean isBreakable()
+    {
+        return this.isBreakable;
+    }
+
+    public void destroy()
+    {
+        int dropPowerUp = (int)(Math.random()*100);
+        int powerUpType = (int)(Math.random()*100);
+
+        if(dropPowerUp < 20)
+        {
+            if(powerUpType > 66)
+            {
+                new PowerUp(PowerUpTypes.bomb,this.getPosition());
+            }
+            else if( powerUpType > 33)
+            {
+                new PowerUp(PowerUpTypes.power,this.getPosition());
+            }
+            else
+            {
+                new PowerUp(PowerUpTypes.speed,this.getPosition());
+            }
+        }
+
+        super.destroy();
     }
 }

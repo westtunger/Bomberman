@@ -15,9 +15,9 @@ import java.awt.*;
  */
 public class Player extends Entity
 {
-    private int power = 2;
+    private int power = 1;
     private int nbBombMax = 1;
-    private int speed = 3;
+    private int speed = 5;
     private int nbBombPlaced = 0;
     private int playerNumber;
     private Direction dir = Direction.down;
@@ -117,7 +117,8 @@ public class Player extends Entity
      * Augment the power of the bomb planted by the player.
      */
     public void augmentPower() {
-        this.power++;
+        if(this.power <5)
+            this.power++;
     }
 
     /**
@@ -131,7 +132,8 @@ public class Player extends Entity
      * Augment the max number of bomb usable at the same time.
      */
     public void augmentNbBombMax() {
-        this.nbBombMax++;
+        if(this.nbBombMax < 5)
+            this.nbBombMax++;
     }
 
     /**
@@ -145,6 +147,7 @@ public class Player extends Entity
      * Augment the speed of the player.
      */
     public void augmentSpeed() {
+        if(this.speed < 10)
         this.speed++;
     }
 
@@ -178,6 +181,10 @@ public class Player extends Entity
         return playerNumber;
     }
 
+    public Direction getDir()
+    {
+        return this.dir;
+    }
     /**
      * Set the player number.
      * @param playerNumber the number of the player
@@ -200,4 +207,5 @@ public class Player extends Entity
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
+
 }

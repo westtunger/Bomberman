@@ -76,6 +76,19 @@ public abstract class Entity{
         return new Point(this.getPosition().x += direction.getDirection().getX()*speed,this.getPosition().y += direction.getDirection().getY()*speed);
     }
 
+    public void setPosition(int x, int y)
+    {
+        this.position.x = x;
+
+        this.position.y = y;
+    }
+
+
+    public boolean checkCollision(Entity entity)
+    {
+        return this.getBBox().intersects(entity.getBBox());
+    }
+
     public Point getSpot(Direction dir)
     {
         Point pos = null;
@@ -130,5 +143,10 @@ public abstract class Entity{
     public void setImageIndex(int imageIndex)
     {
         this.imageIndex = imageIndex;
+    }
+
+    public Rectangle getBBox()
+    {
+        return new Rectangle(this.position.x,this.position.y,Window.getWindowSize().width/15,Window.getWindowSize().width/15);
     }
 }

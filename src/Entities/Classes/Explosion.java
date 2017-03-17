@@ -2,8 +2,10 @@ package Entities.Classes;
 
 import Entities.Enum.Direction;
 import Entities.Enum.Images;
+import Interface.*;
 
 import java.awt.*;
+import java.awt.Window;
 
 /**
  * Explosion Class.
@@ -40,6 +42,11 @@ public class Explosion extends Entity {
         {
             this.destroy();
         }
+    }
+
+    public Rectangle getBBox()
+    {
+        return new Rectangle(this.getPosition().x,this.getPosition().y, Interface.Window.getWindowSize().width/20, Interface.Window.getWindowSize().width/20);
     }
 
     /**

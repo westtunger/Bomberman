@@ -1,8 +1,6 @@
 package Interface;
 
-import Entities.Classes.Entity;
-import Entities.Classes.Player;
-import Entities.Classes.Wall;
+import Entities.Classes.*;
 import Entities.Enum.Direction;
 import KeyMapping.Key;
 import org.w3c.dom.css.RGBColor;
@@ -29,8 +27,7 @@ import java.util.stream.Stream;
  * @version 1.0
  */
 public class PlayGround extends JPanel implements ActionListener, KeyListener{
-    Player playerOne;
-    Player playerTwo;
+    Player[] players = new Player[2];
     int i = 0;
     ArrayList<Entity> entities = null;
     ArrayList<Integer> keys= new ArrayList<>();
@@ -59,7 +56,10 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
                 e.printStackTrace();
             }
 
-            g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/15,Window.getWindowSize().width/15,null);
+            if(entity instanceof Bomb || entity instanceof  Explosion)
+                g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/20,Window.getWindowSize().width/20,null);
+            else
+                g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/15,Window.getWindowSize().width/15,null);
             entity.changeImageIndex();
         }
     }
@@ -94,11 +94,11 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
                         break;
 
                     case 'P':
-                        playerOne = new Player(0,"p1",pos);
+                        players[0] = new Player(0,"p1",pos);
                         break;
 
                     case 'C':
-                        playerTwo = new Player(1,"p2",pos);
+                        players[1] = new Player(1,"p2",pos);
                         break;
                 }
             }
@@ -113,13 +113,76 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        int size = Window.getWindowSize().width/15;
+
         i++;
 
         this.repaint();
 
         for(int j = 0;j<Entity.getEntities().size();j++)
         {
-            Entity.getEntities().get(j).tick();
+            Entity entity = Entity.getEntities().get(j);
+
+            entity.tick();
+
+            for(int l = 0;l<=1;l++)
+            {
+                if(players[l].checkCollision(entity) && entity != players[l] && !(entity instanceof Explosion)
+                        && !(entity instanceof PowerUp))
+                {
+                    switch (players[l].getDir())
+                    {
+                        case up:
+                            players[l].setPosition(players[l].getPosition().x,entity.getPosition().y+size);
+                            break;
+
+                        case right:
+                            players[l].setPosition(entity.getPosition().x-size,players[l].getPosition().y);
+                            break;
+
+                        case down:
+                            players[l].setPosition(players[l].getPosition().x,entity.getPosition().y-size);
+                            break;
+
+                        case left:
+                            players[l].setPosition(entity.getPosition().x+size,players[l].getPosition().y);
+                            break;
+                    }
+                }
+                else if(players[l].checkCollision(entity) && entity instanceof Explosion)
+                {
+                    System.out.println("Player "+l+" died" );
+                }
+                else if(players[l].checkCollision(entity) && entity instanceof PowerUp)
+                {
+                    switch (((PowerUp) entity).getType())
+                    {
+                        case bomb:
+                            players[l].augmentNbBombMax();
+                            break;
+
+                        case power:
+                            players[l].augmentPower();
+                            break;
+
+                        case speed:
+                            players[l].augmentSpeed();
+                            break;
+                    }
+
+                    entity.destroy();
+                }
+            }
+
+            if(entity instanceof  Explosion)
+                for(int l = 0;l<Entity.getEntities().size();l++)
+                {
+                    Entity ent = Entity.getEntities().get(l);
+                    if(entity.checkCollision(ent) && ent instanceof Wall && ((Wall) ent).isBreakable())
+                    {
+                        ent.destroy();
+                    }
+                }
         }
 
         for(int code : keys)
@@ -127,43 +190,43 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
             switch (code)
             {
                 case KeyEvent.VK_S:
-                    playerOne.move(Direction.down);
+                    players[0].move(Direction.down);
                     break;
 
                 case KeyEvent.VK_Z:
-                    playerOne.move(Direction.up);
+                    players[0].move(Direction.up);
                     break;
 
                 case KeyEvent.VK_Q:
-                    playerOne.move(Direction.left);
+                    players[0].move(Direction.left);
                     break;
 
                 case KeyEvent.VK_D:
-                    playerOne.move(Direction.right);
+                    players[0].move(Direction.right);
                     break;
 
                 case KeyEvent.VK_SPACE:
-                    playerOne.plant();
+                    players[0].plant();
                     break;
 
                 case KeyEvent.VK_DOWN:
-                    playerTwo.move(Direction.down);
+                    players[1].move(Direction.down);
                     break;
 
                 case KeyEvent.VK_UP:
-                    playerTwo.move(Direction.up);
+                    players[1].move(Direction.up);
                     break;
 
                 case KeyEvent.VK_LEFT:
-                    playerTwo.move(Direction.left);
+                    players[1].move(Direction.left);
                     break;
 
                 case KeyEvent.VK_RIGHT:
-                    playerTwo.move(Direction.right);
+                    players[1].move(Direction.right);
                     break;
 
                 case KeyEvent.VK_NUMPAD0:
-                    playerTwo.plant();
+                    players[1].plant();
                     break;
             }
         }
@@ -179,7 +242,39 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if(!keys.contains(e.getKeyCode()))
+        if(e.getKeyCode() == KeyEvent.VK_Z || e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_Q || e.getKeyCode() == KeyEvent.VK_D)
+        {
+            if(keys.contains(KeyEvent.VK_Z))
+                keys.removeIf(i -> i == KeyEvent.VK_Z);
+
+            if(keys.contains(KeyEvent.VK_S))
+                keys.removeIf(i -> i == KeyEvent.VK_S);
+
+            if(keys.contains(KeyEvent.VK_Q))
+                keys.removeIf(i -> i == KeyEvent.VK_Q);
+
+            if(keys.contains(KeyEvent.VK_D))
+                keys.removeIf(i -> i == KeyEvent.VK_D);
+
+            keys.add(e.getKeyCode());
+        }
+        else if(e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_DOWN || e.getKeyCode() == KeyEvent.VK_LEFT || e.getKeyCode() == KeyEvent.VK_RIGHT)
+        {
+            if(keys.contains(KeyEvent.VK_UP))
+                keys.removeIf(i -> i == KeyEvent.VK_UP);
+
+            if(keys.contains(KeyEvent.VK_DOWN))
+                keys.removeIf(i -> i == KeyEvent.VK_DOWN);
+
+            if(keys.contains(KeyEvent.VK_LEFT))
+                keys.removeIf(i -> i == KeyEvent.VK_LEFT);
+
+            if(keys.contains(KeyEvent.VK_RIGHT))
+                keys.removeIf(i -> i == KeyEvent.VK_RIGHT);
+
+            keys.add(e.getKeyCode());
+        }
+        else if(!keys.contains(e.getKeyCode()))
             keys.add(e.getKeyCode());
     }
 

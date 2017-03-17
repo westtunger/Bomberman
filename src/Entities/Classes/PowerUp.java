@@ -49,4 +49,9 @@ public class PowerUp extends Entity{
                 return null;
         }
     }
+
+    public PowerUpTypes getType()
+    {
+        return this.type;
+    }
 }
