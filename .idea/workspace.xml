@@ -6,17 +6,46 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" />
+    <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="Basic collision (Need to do the collision check on bomb planting)">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S1.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Back/S1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S2.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Back/S2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S3.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Back/S3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S4.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Back/S4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S5.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Back/S5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S6.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Back/S6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S7.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Back/S7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S8.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Back/S8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S1.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Front/S1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S2.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Front/S2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S3.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Front/S3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S4.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Front/S4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S5.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Front/S5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S6.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Front/S6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S7.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Front/S7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S8.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Front/S8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S1.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Left/S1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S2.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Left/S2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S3.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Left/S3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S4.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Left/S4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S5.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Left/S5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S6.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Left/S6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S7.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Left/S7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S8.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Left/S8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S1.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Right/S1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S2.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Right/S2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S3.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Right/S3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S4.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Right/S4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S5.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Right/S5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S6.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Right/S6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S7.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Right/S7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S8.png" afterPath="$PROJECT_DIR$/Sprites/Bomberman/Right/S8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Entity.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Entity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Explosion.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Explosion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/PowerUp.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/PowerUp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Wall.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Wall.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/level0.txt" afterPath="$PROJECT_DIR$/Levels/level0.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Entity.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Player.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Wall.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Wall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interface/PlayGround.java" afterPath="$PROJECT_DIR$/src/Interface/PlayGround.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -55,13 +84,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="160" column="58" lean-forward="false" selection-start-line="160" selection-start-column="58" selection-end-line="160" selection-end-column="58" />
+            <state relative-caret-position="219">
+              <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
               <folding>
-                <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
                 <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
                 <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
               </folding>
@@ -82,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wall.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Wall.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Wall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            <state relative-caret-position="350">
+              <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
               <folding>
                 <element signature="method#getWallImages#0;class#Wall#0" expanded="false" />
                 <element signature="e#831#832#0" expanded="true" />
@@ -99,8 +127,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+            <state relative-caret-position="481">
+              <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
               <folding>
                 <element signature="method#plant#0;class#Player#0" expanded="false" />
                 <element signature="method#move#0;class#Player#0" expanded="false" />
@@ -130,8 +158,8 @@
       <file leaf-file-name="Explosion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Explosion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="481">
+              <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -224,9 +252,9 @@
         <option value="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" />
-        <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
-        <option value="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Wall.java" />
+        <option value="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
+        <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
       </list>
     </option>
   </component>
@@ -639,7 +667,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489680400431</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Basic collision (Need to do the collision check on bomb planting)">
+      <created>1489760753948</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1489760753948</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -664,7 +699,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.50677085" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32821077" sideWeight="0.49322918" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32601535" sideWeight="0.49322918" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -695,7 +730,8 @@
     <MESSAGE value="Basic deplacement + bomb planting." />
     <MESSAGE value="Update deplacement + bomb planting." />
     <MESSAGE value="Update the deplacement ( smooth * 2000% )" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the deplacement ( smooth * 2000% )" />
+    <MESSAGE value="Basic collision (Need to do the collision check on bomb planting)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic collision (Need to do the collision check on bomb planting)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -773,7 +809,6 @@
         <state relative-caret-position="286">
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
             <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
             <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
           </folding>
@@ -857,7 +892,6 @@
         <state relative-caret-position="255">
           <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding>
-            <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
             <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
             <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
           </folding>
@@ -1107,16 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Explosion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/PowerUp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
@@ -1128,14 +1152,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="160" column="58" lean-forward="false" selection-start-line="160" selection-start-column="58" selection-end-line="160" selection-end-column="58" />
+        <state relative-caret-position="350">
+          <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
           <folding>
-            <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
-            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
-            <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#getWallImages#0;class#Wall#0" expanded="false" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Explosion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1150,8 +1184,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+        <state relative-caret-position="481">
+          <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
           <folding>
             <element signature="method#plant#0;class#Player#0" expanded="false" />
             <element signature="method#move#0;class#Player#0" expanded="false" />
@@ -1162,14 +1196,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Wall.java">
+    <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        <state relative-caret-position="219">
+          <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
           <folding>
-            <element signature="method#getWallImages#0;class#Wall#0" expanded="false" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
+            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#PlayGround#0" expanded="false" />
           </folding>
         </state>
       </provider>

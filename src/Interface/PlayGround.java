@@ -56,8 +56,23 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
                 e.printStackTrace();
             }
 
-            if(entity instanceof Bomb || entity instanceof  Explosion)
-                g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/20,Window.getWindowSize().width/20,null);
+            if(entity instanceof Bomb || entity instanceof  Explosion || entity instanceof Player)
+            {
+                if(!(entity instanceof Player))
+                    g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/20,Window.getWindowSize().width/20,null);
+                else
+                {
+                    if(((Player) entity).getPlayerNumber() == 0)
+                    {
+                        g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/20,Window.getWindowSize().width/20,null);
+                    }
+                    else
+                    {
+                        g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/15,Window.getWindowSize().width/15,null);
+
+                    }
+                }
+            }
             else
                 g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/15,Window.getWindowSize().width/15,null);
             entity.changeImageIndex();
@@ -113,7 +128,8 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        int size = Window.getWindowSize().width/15;
+        int sizea = Window.getWindowSize().width/15;
+        int sizeb = Window.getWindowSize().width/20;
 
         i++;
 
@@ -133,19 +149,19 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
                     switch (players[l].getDir())
                     {
                         case up:
-                            players[l].setPosition(players[l].getPosition().x,entity.getPosition().y+size);
+                            players[l].setPosition(players[l].getPosition().x,entity.getPosition().y+sizea);
                             break;
 
                         case right:
-                            players[l].setPosition(entity.getPosition().x-size,players[l].getPosition().y);
+                            players[l].setPosition(entity.getPosition().x-sizeb,players[l].getPosition().y);
                             break;
 
                         case down:
-                            players[l].setPosition(players[l].getPosition().x,entity.getPosition().y-size);
+                            players[l].setPosition(players[l].getPosition().x,entity.getPosition().y-sizeb);
                             break;
 
                         case left:
-                            players[l].setPosition(entity.getPosition().x+size,players[l].getPosition().y);
+                            players[l].setPosition(entity.getPosition().x+sizea,players[l].getPosition().y);
                             break;
                     }
                 }
