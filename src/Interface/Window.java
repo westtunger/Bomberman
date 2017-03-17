@@ -54,7 +54,7 @@ public class Window extends JFrame{
                 break;
 
             case menu:
-                this.setContentPane(new Menu(this));
+                this.getContentPane().add(new Menu(this));
                 this.getContentPane().remove(pg);
                 this.revalidate();
                 this.repaint();
