@@ -27,8 +27,6 @@ public class Window extends JFrame{
     {
         this.setTitle("Bomberman V1.0 By Nicolas Viseur");
         windowSize.setSize((int)(screenSize.getHeight()-screenSize.getHeight()/10),(int)(screenSize.getHeight()-screenSize.getHeight()/10));
-        pg = new PlayGround(0);
-        this.addKeyListener(pg);
         this.setSize(windowSize);
         this.isAlwaysOnTop();
         this.setLocationRelativeTo(null);
@@ -45,6 +43,8 @@ public class Window extends JFrame{
         switch (panel)
         {
             case game:
+                pg = new PlayGround(0, this);
+                this.addKeyListener(pg);
                 this.getContentPane().add(pg);
                 this.revalidate();
                 this.repaint();
@@ -55,6 +55,9 @@ public class Window extends JFrame{
 
             case menu:
                 this.setContentPane(new Menu(this));
+                this.getContentPane().remove(pg);
+                this.revalidate();
+                this.repaint();
                 break;
 
             case scoreboard:

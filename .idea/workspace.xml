@@ -8,10 +8,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Entity.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Entity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Entity.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Player.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interface/PlayGround.java" afterPath="$PROJECT_DIR$/src/Interface/PlayGround.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interface/Window.java" afterPath="$PROJECT_DIR$/src/Interface/Window.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,13 +32,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Interface/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="395">
+              <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#1988#1989#0" expanded="true" />
+                <element signature="e#2021#2022#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,7 +48,7 @@
       <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interface/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
+            <state relative-caret-position="-44">
               <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
               <folding />
             </state>
@@ -52,8 +58,8 @@
       <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="138" column="9" lean-forward="true" selection-start-line="138" selection-start-column="9" selection-end-line="139" selection-end-column="56" />
+            <state relative-caret-position="483">
+              <caret line="207" column="47" lean-forward="false" selection-start-line="207" selection-start-column="47" selection-end-line="207" selection-end-column="47" />
               <folding>
                 <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
                 <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
@@ -93,13 +99,13 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2727">
-              <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding>
                 <element signature="method#move#0;class#Player#0" expanded="false" />
                 <element signature="method#getPlayerImages#0;class#Player#0" expanded="false" />
-                <element signature="e#4132#4133#0" expanded="true" />
-                <element signature="e#4163#4164#0" expanded="true" />
+                <element signature="e#4096#4097#0" expanded="true" />
+                <element signature="e#4127#4128#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,7 +129,7 @@
       <file leaf-file-name="Explosion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Explosion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
+            <state relative-caret-position="419">
               <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -135,24 +141,26 @@
       <file leaf-file-name="Entity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="110" column="106" lean-forward="false" selection-start-line="110" selection-start-column="106" selection-end-line="110" selection-end-column="106" />
+            <state relative-caret-position="461">
+              <caret line="154" column="8" lean-forward="false" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
               <folding>
                 <element signature="method#move#0;class#Entity#0" expanded="false" />
                 <element signature="e#2077#2078#0" expanded="true" />
                 <element signature="e#2143#2144#0" expanded="true" />
                 <element signature="method#changeImageIndex#0;class#Entity#0" expanded="false" />
                 <element signature="method#getBBox#0;class#Entity#0" expanded="false" />
+                <element signature="e#3785#3786#0" expanded="true" />
+                <element signature="e#3817#3818#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bomb.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bomb.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Bomb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+            <state relative-caret-position="268">
+              <caret line="54" column="10" lean-forward="false" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
               <folding>
                 <element signature="method#Bomb#0;class#Bomb#0" expanded="false" />
                 <element signature="method#checkIfPlantAllowed#0;class#Bomb#0" expanded="false" />
@@ -213,15 +221,15 @@
         <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/Main/Game.java" />
-        <option value="$PROJECT_DIR$/src/Interface/Window.java" />
         <option value="$PROJECT_DIR$/src/KeyMapping/Key.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Wall.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
-        <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Entity.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
+        <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
+        <option value="$PROJECT_DIR$/src/Interface/Window.java" />
       </list>
     </option>
   </component>
@@ -648,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489762694900</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Collision detection when planting bomb so the player can't plant on wall;">
+      <created>1489763494880</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1489763494880</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -706,7 +721,8 @@
     <MESSAGE value="Update the deplacement ( smooth * 2000% )" />
     <MESSAGE value="Basic collision (Need to do the collision check on bomb planting)" />
     <MESSAGE value="Remove useless free space in player images." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove useless free space in player images." />
+    <MESSAGE value="Collision detection when planting bomb so the player can't plant on wall;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Collision detection when planting bomb so the player can't plant on wall;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -742,7 +758,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2021#2022#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,8 +818,8 @@
           <folding>
             <element signature="method#move#0;class#Player#0" expanded="false" />
             <element signature="method#getPlayerImages#0;class#Player#0" expanded="false" />
-            <element signature="e#4132#4133#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
+            <element signature="e#4096#4097#0" expanded="true" />
+            <element signature="e#4127#4128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -817,6 +834,8 @@
             <element signature="e#2143#2144#0" expanded="true" />
             <element signature="method#changeImageIndex#0;class#Entity#0" expanded="false" />
             <element signature="method#getBBox#0;class#Entity#0" expanded="false" />
+            <element signature="e#3785#3786#0" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -886,8 +905,8 @@
           <folding>
             <element signature="method#move#0;class#Player#0" expanded="false" />
             <element signature="method#getPlayerImages#0;class#Player#0" expanded="false" />
-            <element signature="e#4132#4133#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
+            <element signature="e#4096#4097#0" expanded="true" />
+            <element signature="e#4127#4128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,6 +921,8 @@
             <element signature="e#2143#2144#0" expanded="true" />
             <element signature="method#changeImageIndex#0;class#Entity#0" expanded="false" />
             <element signature="method#getBBox#0;class#Entity#0" expanded="false" />
+            <element signature="e#3785#3786#0" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -911,7 +932,8 @@
         <state relative-caret-position="680">
           <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2021#2022#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -957,6 +979,8 @@
             <element signature="e#2143#2144#0" expanded="true" />
             <element signature="method#changeImageIndex#0;class#Entity#0" expanded="false" />
             <element signature="method#getBBox#0;class#Entity#0" expanded="false" />
+            <element signature="e#3785#3786#0" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -968,8 +992,8 @@
           <folding>
             <element signature="method#move#0;class#Player#0" expanded="false" />
             <element signature="method#getPlayerImages#0;class#Player#0" expanded="false" />
-            <element signature="e#4132#4133#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
+            <element signature="e#4096#4097#0" expanded="true" />
+            <element signature="e#4127#4128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1002,6 +1026,8 @@
             <element signature="e#2143#2144#0" expanded="true" />
             <element signature="method#changeImageIndex#0;class#Entity#0" expanded="false" />
             <element signature="method#getBBox#0;class#Entity#0" expanded="false" />
+            <element signature="e#3785#3786#0" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1013,8 +1039,8 @@
           <folding>
             <element signature="method#move#0;class#Player#0" expanded="false" />
             <element signature="method#getPlayerImages#0;class#Player#0" expanded="false" />
-            <element signature="e#4132#4133#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
+            <element signature="e#4096#4097#0" expanded="true" />
+            <element signature="e#4127#4128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1066,16 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Images.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1096,6 +1112,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/PowerUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+          <folding>
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="154" column="8" lean-forward="false" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
+          <folding>
+            <element signature="method#move#0;class#Entity#0" expanded="false" />
+            <element signature="e#2077#2078#0" expanded="true" />
+            <element signature="e#2143#2144#0" expanded="true" />
+            <element signature="method#changeImageIndex#0;class#Entity#0" expanded="false" />
+            <element signature="method#getBBox#0;class#Entity#0" expanded="false" />
+            <element signature="e#3785#3786#0" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <element signature="method#move#0;class#Player#0" expanded="false" />
+            <element signature="method#getPlayerImages#0;class#Player#0" expanded="false" />
+            <element signature="e#4096#4097#0" expanded="true" />
+            <element signature="e#4127#4128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interface/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -1108,17 +1172,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Explosion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
+        <state relative-caret-position="419">
           <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1126,21 +1182,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/PowerUp.java">
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Bomb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+        <state relative-caret-position="268">
+          <caret line="54" column="10" lean-forward="false" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
           <folding>
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="method#Bomb#0;class#Bomb#0" expanded="false" />
+            <element signature="method#checkIfPlantAllowed#0;class#Bomb#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="138" column="9" lean-forward="true" selection-start-line="138" selection-start-column="9" selection-end-line="139" selection-end-column="56" />
+        <state relative-caret-position="483">
+          <caret line="207" column="47" lean-forward="false" selection-start-line="207" selection-start-column="47" selection-end-line="207" selection-end-column="47" />
           <folding>
             <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
             <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
@@ -1149,40 +1205,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/Interface/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2727">
-          <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+        <state relative-caret-position="395">
+          <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
           <folding>
-            <element signature="method#move#0;class#Player#0" expanded="false" />
-            <element signature="method#getPlayerImages#0;class#Player#0" expanded="false" />
-            <element signature="e#4132#4133#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="110" column="106" lean-forward="false" selection-start-line="110" selection-start-column="106" selection-end-line="110" selection-end-column="106" />
-          <folding>
-            <element signature="method#move#0;class#Entity#0" expanded="false" />
-            <element signature="e#2077#2078#0" expanded="true" />
-            <element signature="e#2143#2144#0" expanded="true" />
-            <element signature="method#changeImageIndex#0;class#Entity#0" expanded="false" />
-            <element signature="method#getBBox#0;class#Entity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Bomb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-          <folding>
-            <element signature="method#Bomb#0;class#Bomb#0" expanded="false" />
-            <element signature="method#checkIfPlantAllowed#0;class#Bomb#0" expanded="false" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2021#2022#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -21,7 +21,6 @@ public class Player extends Entity
     private int nbBombPlaced = 0;
     private int playerNumber;
     private Direction dir = Direction.down;
-    private boolean isAlive = true;
 
     public Player(int playerNumber,String name, Point position){
         super(name,position, null);
@@ -192,22 +191,6 @@ public class Player extends Entity
     public void setPlayerNumber(int playerNumber) {
         this.playerNumber = playerNumber;
     }
-
-    /**
-     * Return true if the player is alive, otherwise false.
-     */
-    public boolean isAlive() {
-        return isAlive;
-    }
-
-    /**
-     * Set the actual state of the player.
-     * @param alive the state of the player.
-     */
-    public void setAlive(boolean alive) {
-        isAlive = alive;
-    }
-
 
     public Rectangle getBBox()
     {

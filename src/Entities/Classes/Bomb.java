@@ -52,7 +52,7 @@ public class Bomb extends Entity {
     /**
      * Create the explosions at each end of the bomb, then destroy the bomb.
      */
-    private void explode()
+    public void explode()
     {
         new Explosion(this.power, Direction.up,this.getSpot(Direction.up));
         new Explosion(this.power, Direction.right,this.getSpot(Direction.right));

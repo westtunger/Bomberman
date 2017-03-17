@@ -149,4 +149,9 @@ public abstract class Entity{
     {
         return new Rectangle(this.position.x,this.position.y,Window.getWindowSize().width/15,Window.getWindowSize().width/15);
     }
+
+    public static void clear()
+    {
+        entities.clear();
+    }
 }

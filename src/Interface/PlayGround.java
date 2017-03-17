@@ -2,6 +2,7 @@ package Interface;
 
 import Entities.Classes.*;
 import Entities.Enum.Direction;
+import Entities.Enum.Panels;
 import KeyMapping.Key;
 import org.w3c.dom.css.RGBColor;
 
@@ -28,15 +29,16 @@ import java.util.stream.Stream;
  */
 public class PlayGround extends JPanel implements ActionListener, KeyListener{
     Player[] players = new Player[2];
-    int i = 0;
     ArrayList<Entity> entities = null;
     ArrayList<Integer> keys= new ArrayList<>();
     Timer t = new Timer(50,this);
+    Window window;
 
-    public PlayGround(int level)
+    public PlayGround(int level, Window window)
     {
         this.createLevel(level);
         this.setBackground(Color.lightGray);
+        this.window = window;
     }
 
     @Override
@@ -131,8 +133,6 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
         int sizea = Window.getWindowSize().width/15;
         int sizeb = Window.getWindowSize().width/20;
 
-        i++;
-
         this.repaint();
 
         for(int j = 0;j<Entity.getEntities().size();j++)
@@ -167,7 +167,12 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
                 }
                 else if(players[l].checkCollision(entity) && entity instanceof Explosion)
                 {
-                    System.out.println("Player "+l+" died" );
+                    int nb = l == 0 ? 2 : 1;
+                    players[l].destroy();
+                    t.stop();
+                    JOptionPane.showMessageDialog(this,"Victoire du joueur "+nb+" !");
+                    Entity.clear();
+                    window.changePanel(Panels.menu);
                 }
                 else if(players[l].checkCollision(entity) && entity instanceof PowerUp)
                 {
@@ -197,6 +202,10 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
                     if(entity.checkCollision(ent) && ent instanceof Wall && ((Wall) ent).isBreakable())
                     {
                         ent.destroy();
+                    }
+                    else if(entity.checkCollision(ent) && ent instanceof Bomb)
+                    {
+                        ((Bomb) ent).explode();
                     }
                 }
         }
@@ -246,9 +255,6 @@ public class PlayGround extends JPanel implements ActionListener, KeyListener{
                     break;
             }
         }
-
-        if(i>=10000)
-            t.stop();
     }
 
     @Override
