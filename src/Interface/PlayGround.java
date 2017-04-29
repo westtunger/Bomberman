@@ -1,20 +1,22 @@
 package Interface;
 
 import Entities.Classes.*;
-import Entities.Enum.Direction;
-import Entities.Enum.Panels;
+import KeyMapping.Key;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.Timer;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+
+import static Entities.Enum.Direction.*;
+import static Entities.Enum.Panels.menu;
 
 /**
  * Playground Class.
@@ -22,7 +24,7 @@ import java.util.*;
  * @author Nicolas Viseur
  * @version 1.0
  */
-class PlayGround extends JPanel implements ActionListener, KeyListener{
+class PlayGround extends JPanel implements ActionListener{
     private final Player[] players = new Player[2];
     private final ArrayList<Integer> keys= new ArrayList<>();
     private final Timer t = new Timer(50,this);
@@ -54,23 +56,11 @@ class PlayGround extends JPanel implements ActionListener, KeyListener{
 
             if(entity instanceof Bomb || entity instanceof  Explosion || entity instanceof Player)
             {
-                if(!(entity instanceof Player))
-                    g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/20,Window.getWindowSize().width/20,null);
-                else
-                {
-                    if(((Player) entity).getPlayerNumber() == 0)
-                    {
-                        g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/20,Window.getWindowSize().width/20,null);
-                    }
-                    else
-                    {
-                        g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/15,Window.getWindowSize().width/15,null);
-
-                    }
-                }
+                g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/20,Window.getWindowSize().width/20,null);
             }
             else
                 g.drawImage(img,entity.getPosition().x,entity.getPosition().y,Window.getWindowSize().width/15,Window.getWindowSize().width/15,null);
+
             entity.changeImageIndex();
         }
     }
@@ -133,10 +123,66 @@ class PlayGround extends JPanel implements ActionListener, KeyListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        processInput();
+
+        update();
+
+        repaint();
+    }
+
+    private void processInput()
+    {
+        for(int code : keys)
+        {
+            switch (Key.fromCode(code))
+            {
+                case p1Down:
+                    players[0].move(down);
+                    break;
+
+                case p1Up:
+                    players[0].move(up);
+                    break;
+
+                case p1Left:
+                    players[0].move(left);
+                    break;
+
+                case p1Right:
+                    players[0].move(right);
+                    break;
+
+                case p1PoseBomb:
+                    players[0].plant();
+                    break;
+
+                case p2Down:
+                    players[1].move(down);
+                    break;
+
+                case p2Up:
+                    players[1].move(up);
+                    break;
+
+                case p2Left:
+                    players[1].move(left);
+                    break;
+
+                case p2Right:
+                    players[1].move(right);
+                    break;
+
+                case p2PoseBomb:
+                    players[1].plant();
+                    break;
+            }
+        }
+    }
+
+    private void update()
+    {
         int sizea = Window.getWindowSize().width/15;
         int sizeb = Window.getWindowSize().width/20;
-
-        this.repaint();
 
         for(int j = 0;j<Entity.getEntities().size();j++)
         {
@@ -146,55 +192,59 @@ class PlayGround extends JPanel implements ActionListener, KeyListener{
 
             for(int l = 0;l<=1;l++)
             {
-                if(players[l].checkCollision(entity) && entity != players[l] && !(entity instanceof Explosion)
-                        && !(entity instanceof PowerUp))
+                if(players[l].checkCollision(entity))
                 {
-                    switch (players[l].getDir())
+                    if(entity != players[l] && !(entity instanceof Explosion)
+                            && !(entity instanceof PowerUp)
+                            && !(entity instanceof Bomb && ((Bomb)entity).getOwner().equals(players[l]) && players[l].isCanWalkOnBomb()))
                     {
-                        case up:
-                            players[l].setPosition(players[l].getPosition().x,entity.getPosition().y+sizea);
-                            break;
+                        switch (players[l].getDir())
+                        {
+                            case up:
+                                players[l].setPosition(players[l].getPosition().x,entity.getPosition().y+sizea);
+                                break;
 
-                        case right:
-                            players[l].setPosition(entity.getPosition().x-sizeb,players[l].getPosition().y);
-                            break;
+                            case right:
+                                players[l].setPosition(entity.getPosition().x-sizeb,players[l].getPosition().y);
+                                break;
 
-                        case down:
-                            players[l].setPosition(players[l].getPosition().x,entity.getPosition().y-sizeb);
-                            break;
+                            case down:
+                                players[l].setPosition(players[l].getPosition().x,entity.getPosition().y-sizeb);
+                                break;
 
-                        case left:
-                            players[l].setPosition(entity.getPosition().x+sizea,players[l].getPosition().y);
-                            break;
+                            case left:
+                                players[l].setPosition(entity.getPosition().x+sizea,players[l].getPosition().y);
+                                break;
+                        }
                     }
-                }
-                else if(players[l].checkCollision(entity) && entity instanceof Explosion)
-                {
-                    int nb = l == 0 ? 2 : 1;
-                    players[l].destroy();
-                    t.stop();
-                    JOptionPane.showMessageDialog(this,"Victoire du joueur "+nb+" !");
-                    Entity.clear();
-                    window.changePanel(Panels.menu);
-                }
-                else if(players[l].checkCollision(entity) && entity instanceof PowerUp)
-                {
-                    switch (((PowerUp) entity).getType())
+                    else if(entity instanceof Explosion)
                     {
-                        case bomb:
-                            players[l].augmentNbBombMax();
-                            break;
-
-                        case power:
-                            players[l].augmentPower();
-                            break;
-
-                        case speed:
-                            players[l].augmentSpeed();
-                            break;
+                        int nb = l == 0 ? 2 : 1;
+                        players[l].destroy();
+                        t.stop();
+                        JOptionPane.showMessageDialog(this,"Victoire du joueur "+nb+" !");
+                        Entity.clear();
+                        window.changePanel(menu);
                     }
+                    else if(entity instanceof PowerUp)
+                    {
+                        switch (((PowerUp) entity).getType())
+                        {
+                            case bomb:
+                                players[l].augmentNbBombMax();
+                                break;
 
-                    entity.destroy();
+                            case power:
+                                players[l].augmentPower();
+                                break;
+
+                            case speed:
+                                players[l].augmentSpeed();
+                                break;
+                        }
+
+                        entity.destroy();
+                    }
                 }
             }
 
@@ -202,109 +252,33 @@ class PlayGround extends JPanel implements ActionListener, KeyListener{
                 for(int l = 0;l<Entity.getEntities().size();l++)
                 {
                     Entity ent = Entity.getEntities().get(l);
-                    if(entity.checkCollision(ent) && ent instanceof Wall && ((Wall) ent).isBreakable())
+                    if(entity.checkCollision(ent) && (ent instanceof Wall && ((Wall) ent).isBreakable()) || (ent instanceof PowerUp && !((PowerUp)ent).isInvinsible()))
                     {
+                        entity.destroy();
                         ent.destroy();
                     }
                     else if(entity.checkCollision(ent) && ent instanceof Bomb)
                     {
+                        entity.destroy();
                         ((Bomb) ent).explode();
                     }
                 }
         }
-
-        for(int code : keys)
-        {
-            switch (code)
-            {
-                case KeyEvent.VK_S:
-                    players[0].move(Direction.down);
-                    break;
-
-                case KeyEvent.VK_Z:
-                    players[0].move(Direction.up);
-                    break;
-
-                case KeyEvent.VK_Q:
-                    players[0].move(Direction.left);
-                    break;
-
-                case KeyEvent.VK_D:
-                    players[0].move(Direction.right);
-                    break;
-
-                case KeyEvent.VK_SPACE:
-                    players[0].plant();
-                    break;
-
-                case KeyEvent.VK_DOWN:
-                    players[1].move(Direction.down);
-                    break;
-
-                case KeyEvent.VK_UP:
-                    players[1].move(Direction.up);
-                    break;
-
-                case KeyEvent.VK_LEFT:
-                    players[1].move(Direction.left);
-                    break;
-
-                case KeyEvent.VK_RIGHT:
-                    players[1].move(Direction.right);
-                    break;
-
-                case KeyEvent.VK_NUMPAD0:
-                    players[1].plant();
-                    break;
-            }
-        }
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-
+    public void addKey(Integer key)
+    {
+        keys.add(key);
     }
 
-    @Override
-    public void keyPressed(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_Z || e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_Q || e.getKeyCode() == KeyEvent.VK_D)
-        {
-            if(keys.contains(KeyEvent.VK_Z))
-                keys.removeIf(i -> i == KeyEvent.VK_Z);
-
-            if(keys.contains(KeyEvent.VK_S))
-                keys.removeIf(i -> i == KeyEvent.VK_S);
-
-            if(keys.contains(KeyEvent.VK_Q))
-                keys.removeIf(i -> i == KeyEvent.VK_Q);
-
-            if(keys.contains(KeyEvent.VK_D))
-                keys.removeIf(i -> i == KeyEvent.VK_D);
-
-            keys.add(e.getKeyCode());
-        }
-        else if(e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_DOWN || e.getKeyCode() == KeyEvent.VK_LEFT || e.getKeyCode() == KeyEvent.VK_RIGHT)
-        {
-            if(keys.contains(KeyEvent.VK_UP))
-                keys.removeIf(i -> i == KeyEvent.VK_UP);
-
-            if(keys.contains(KeyEvent.VK_DOWN))
-                keys.removeIf(i -> i == KeyEvent.VK_DOWN);
-
-            if(keys.contains(KeyEvent.VK_LEFT))
-                keys.removeIf(i -> i == KeyEvent.VK_LEFT);
-
-            if(keys.contains(KeyEvent.VK_RIGHT))
-                keys.removeIf(i -> i == KeyEvent.VK_RIGHT);
-
-            keys.add(e.getKeyCode());
-        }
-        else if(!keys.contains(e.getKeyCode()))
-            keys.add(e.getKeyCode());
+    public boolean getKey(Integer key)
+    {
+        return keys.contains(key);
     }
 
-    @Override
-    public void keyReleased(KeyEvent e) {
-        keys.removeIf(i -> i == e.getKeyCode());
+    public void removeKey(Integer key)
+    {
+        //Use equals instead of == since we are comparing two Object of class Integer and not two int
+        keys.removeIf(i -> i.equals(key));
     }
 }

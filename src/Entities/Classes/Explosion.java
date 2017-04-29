@@ -14,7 +14,7 @@ import java.awt.*;
 public class Explosion extends Entity {
 
     private int power;
-    private int timer = 15;
+    private int timer = 3;
     private final Direction dir;
 
     public Explosion(int power, Direction dir, Point pos)

@@ -43,7 +43,7 @@ public class Window extends JFrame{
         {
             case game:
                 pg = new PlayGround(this);
-                this.addKeyListener(pg);
+                this.addKeyListener(new InputListener(pg));
                 this.getContentPane().add(pg);
                 this.revalidate();
                 this.repaint();
@@ -57,14 +57,6 @@ public class Window extends JFrame{
                 this.getContentPane().remove(pg);
                 this.revalidate();
                 this.repaint();
-                break;
-
-            case scoreboard:
-
-                break;
-
-            default:
-
                 break;
         }
     }

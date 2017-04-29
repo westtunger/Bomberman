@@ -1,10 +1,11 @@
 package Entities.Classes;
 
-import Entities.Enum.Direction;
-import Entities.Enum.Images;
 import Interface.Window;
 
 import java.awt.*;
+
+import static Entities.Enum.Direction.*;
+import static Entities.Enum.Images.bomb;
 
 /**
  * Bomb Class.
@@ -20,26 +21,9 @@ public class Bomb extends Entity {
 
     public Bomb(int power, Point pos, Player owner)
     {
-        super("Bomb",pos, Images.bomb);
+        super("Bomb",pos, bomb);
         this.power = power;
         this.owner = owner;
-
-        checkIfPlantAllowed();
-    }
-
-    /**
-     * Look if there is no entity in front of the player, to be sure that he can plant the bomb.
-     */
-    private void checkIfPlantAllowed()
-    {
-        for(int i = 0; i<Entity.getEntities().size();i++)
-        {
-            if(this.checkCollision(Entity.getEntities().get(i)) && Entity.getEntities().get(i) != this)
-            {
-                owner.reduceNbBombPlaced();
-                this.destroy();
-            }
-        }
     }
 
     @Override
@@ -56,10 +40,10 @@ public class Bomb extends Entity {
      */
     public void explode()
     {
-        new Explosion(this.power, Direction.up,this.getSpot(Direction.up));
-        new Explosion(this.power, Direction.right,this.getSpot(Direction.right));
-        new Explosion(this.power, Direction.down,this.getSpot(Direction.down));
-        new Explosion(this.power, Direction.left,this.getSpot(Direction.left));
+        new Explosion(this.power, up,this.getSpot(up));
+        new Explosion(this.power, right,this.getSpot(right));
+        new Explosion(this.power, down,this.getSpot(down));
+        new Explosion(this.power, left,this.getSpot(left));
 
         owner.reduceNbBombPlaced();
 
@@ -72,11 +56,11 @@ public class Bomb extends Entity {
 
         if(index<3)
         {
-           super.changeImageIndex();
+            super.changeImageIndex();
         }
         else
         {
-            this.setImageIndex(2);
+            super.resetImageIndex();
         }
     }
 
@@ -84,5 +68,10 @@ public class Bomb extends Entity {
     public Rectangle getBBox()
     {
         return new Rectangle(this.getPosition().x,this.getPosition().y, Window.getWindowSize().width/20,Window.getWindowSize().width/20);
+    }
+
+    public Player getOwner()
+    {
+        return this.owner;
     }
 }

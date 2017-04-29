@@ -18,6 +18,7 @@ public class Player extends Entity
     private int speed = 5;
     private int nbBombPlaced = 0;
     private int playerNumber;
+    private boolean canWalkOnBomb = false;
     private Direction dir = Direction.down;
 
     public Player(int playerNumber,String name, Point position){
@@ -27,20 +28,39 @@ public class Player extends Entity
         this.setImages(this.getPlayerImages(playerNumber));
     }
 
+    public boolean isCanWalkOnBomb() {
+        return canWalkOnBomb;
+    }
+
     @Override
     public void tick()
     {
+        boolean coll = false;
+
+        if(this.canWalkOnBomb)
+            for(Entity entity : Entity.getEntities())
+            {
+                if(entity instanceof Bomb && ((Bomb)entity).getOwner().equals(this) && this.checkCollision(entity))
+                {
+                    coll = true;
+                }
+            }
+
+        if(!coll)
+            this.canWalkOnBomb = false;
     }
 
     /**
-     * Plant a new bomb in front of the player.
+     * Plant a new bomb below the player.
+     * @see Bomb
      */
     public void plant()
     {
         if(this.nbBombPlaced<this.nbBombMax)
         {
             this.augmentNbBombPlaced();
-            new Bomb(this.power,this.getSpot(this.dir),this);
+            new Bomb(this.power, new Point(this.getPosition().x,this.getPosition().y),this);
+            this.canWalkOnBomb = true;
         }
     }
 
@@ -91,7 +111,6 @@ public class Player extends Entity
                     this.setImages(Images.playerTwoBack);
                     break;
             }
-
     }
 
     /**
@@ -185,5 +204,15 @@ public class Player extends Entity
     public Rectangle getBBox()
     {
         return new Rectangle(this.getPosition().x,this.getPosition().y, Interface.Window.getWindowSize().width/20, Interface.Window.getWindowSize().width/20);
+    }
+
+    public boolean equals(Object o)
+    {
+        if(o instanceof Player)
+        {
+            return super.equals(this) && ((Player) o).getPlayerNumber() == this.getPlayerNumber();
+        }
+
+        return false;
     }
 }

@@ -13,11 +13,14 @@ import java.awt.*;
  */
 public class PowerUp extends Entity{
     private final PowerUpTypes type;
+    private boolean invinsible;
+    private int timer = 20;
 
     public PowerUp(PowerUpTypes type, Point pos)
     {
         super("PowerUp",pos,null);
         this.type = type;
+        this.invinsible = true;
 
         this.setImages(this.getPowerUpImages(type));
     }
@@ -25,7 +28,18 @@ public class PowerUp extends Entity{
     @Override
     public void tick()
     {
+        if(timer> 0)
+        {
+            timer--;
+        }
+        else
+        {
+            this.invinsible = false;
+        }
+    }
 
+    public boolean isInvinsible() {
+        return invinsible;
     }
 
     /**

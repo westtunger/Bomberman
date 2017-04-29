@@ -7,9 +7,9 @@ package Entities.Enum;
  * @version 1.0
  */
 public enum PowerUpTypes {
-    power(0), bomb(1), speed(2);
+    power(), bomb(), speed();
 
-    PowerUpTypes(int type)
+    PowerUpTypes()
     {
     }
 

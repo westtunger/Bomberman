@@ -115,19 +115,19 @@ public abstract class Entity{
         switch (dir)
         {
             case up:
-                pos = new Point(this.getPosition().x,this.getPosition().y- Window.getWindowSize().width/20);
+                    pos = new Point(this.getPosition().x,this.getPosition().y- Window.getWindowSize().width/20);
                 break;
 
             case right:
-                pos = new Point(this.getPosition().x+ Window.getWindowSize().width/20,this.getPosition().y);
+                    pos = new Point(this.getPosition().x+ Window.getWindowSize().width/20,this.getPosition().y);
                 break;
 
             case left:
-                pos = new Point(this.getPosition().x- Window.getWindowSize().width/20,this.getPosition().y);
+                    pos = new Point(this.getPosition().x- Window.getWindowSize().width/20,this.getPosition().y);
                 break;
 
             case down:
-                pos = new Point(this.getPosition().x,this.getPosition().y+ Window.getWindowSize().width/20);
+                    pos = new Point(this.getPosition().x,this.getPosition().y+ Window.getWindowSize().width/20);
                 break;
         }
 
@@ -171,11 +171,12 @@ public abstract class Entity{
     }
 
     /**
-     * Set the image index of the entity.
+     * Reset the image index of the entity.
+     * Only used with Bomb
      */
-    void setImageIndex(int imageIndex)
+    void resetImageIndex()
     {
-        this.imageIndex = imageIndex;
+        this.imageIndex = 2;
     }
 
     /**
@@ -183,7 +184,7 @@ public abstract class Entity{
      * @return the bounding box of the entity.
      * @see Rectangle
      */
-    public Rectangle getBBox()
+    Rectangle getBBox()
     {
         return new Rectangle(this.position.x,this.position.y,Window.getWindowSize().width/15,Window.getWindowSize().width/15);
     }
@@ -195,5 +196,15 @@ public abstract class Entity{
     public static void clear()
     {
         entities.clear();
+    }
+
+    public boolean equals(Object o)
+    {
+        if(o instanceof Entity)
+        {
+            return ((Entity) o).getPosition().equals(this.getPosition()) && ((Entity) o).getName().equals(this.getName());
+        }
+
+        return false;
     }
 }
