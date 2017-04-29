@@ -125,7 +125,7 @@ class PlayGround extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         processInput();
 
-        update();
+        processCollision();
 
         repaint();
     }
@@ -179,7 +179,7 @@ class PlayGround extends JPanel implements ActionListener{
         }
     }
 
-    private void update()
+    private void processCollision()
     {
         int sizea = Window.getWindowSize().width/15;
         int sizeb = Window.getWindowSize().width/20;
@@ -252,7 +252,7 @@ class PlayGround extends JPanel implements ActionListener{
                 for(int l = 0;l<Entity.getEntities().size();l++)
                 {
                     Entity ent = Entity.getEntities().get(l);
-                    if(entity.checkCollision(ent) && (ent instanceof Wall && ((Wall) ent).isBreakable()) || (ent instanceof PowerUp && !((PowerUp)ent).isInvinsible()))
+                    if(entity.checkCollision(ent) && ((ent instanceof Wall && ((Wall) ent).isBreakable()) || (ent instanceof PowerUp && !((PowerUp)ent).isInvinsible())))
                     {
                         entity.destroy();
                         ent.destroy();

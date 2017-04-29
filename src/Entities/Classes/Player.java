@@ -20,6 +20,7 @@ public class Player extends Entity
     private int playerNumber;
     private boolean canWalkOnBomb = false;
     private Direction dir = Direction.down;
+    private int timer;
 
     public Player(int playerNumber,String name, Point position){
         super(name,position, null);
@@ -35,6 +36,10 @@ public class Player extends Entity
     @Override
     public void tick()
     {
+        if(timer > 0)
+            timer--;
+
+
         boolean coll = false;
 
         if(this.canWalkOnBomb)
@@ -56,8 +61,9 @@ public class Player extends Entity
      */
     public void plant()
     {
-        if(this.nbBombPlaced<this.nbBombMax)
+        if(this.nbBombPlaced<this.nbBombMax && timer == 0)
         {
+            timer = 10;
             this.augmentNbBombPlaced();
             new Bomb(this.power, new Point(this.getPosition().x,this.getPosition().y),this);
             this.canWalkOnBomb = true;
