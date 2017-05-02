@@ -177,7 +177,7 @@ class PlayGround extends JPanel implements ActionListener{
                     break;
 
                 default:
-                    
+
             }
         }
     }
@@ -190,8 +190,6 @@ class PlayGround extends JPanel implements ActionListener{
         for(int j = 0;j<Entity.getEntities().size();j++)
         {
             Entity entity = Entity.getEntities().get(j);
-
-            entity.tick();
 
             for(int l = 0;l<=1;l++)
             {
@@ -266,6 +264,9 @@ class PlayGround extends JPanel implements ActionListener{
                         ((Bomb) ent).explode();
                     }
                 }
+
+            if(Entity.getEntities().contains(entity))
+                entity.tick();
         }
     }
 
