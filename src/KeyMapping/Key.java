@@ -10,7 +10,8 @@ import java.awt.event.KeyEvent;
  */
 public enum Key{
     p1Up(KeyEvent.VK_Z), p1Down(KeyEvent.VK_S), p1Left(KeyEvent.VK_Q), p1Right(KeyEvent.VK_D), p1PoseBomb(KeyEvent.VK_SPACE),
-    p2Up(KeyEvent.VK_UP), p2Down(KeyEvent.VK_DOWN), p2Left(KeyEvent.VK_LEFT), p2Right(KeyEvent.VK_RIGHT), p2PoseBomb(KeyEvent.VK_NUMPAD0);
+    p2Up(KeyEvent.VK_UP), p2Down(KeyEvent.VK_DOWN), p2Left(KeyEvent.VK_LEFT), p2Right(KeyEvent.VK_RIGHT), p2PoseBomb(KeyEvent.VK_NUMPAD0),
+    otherKey(0);
 
     private final int code;
 
@@ -41,6 +42,7 @@ public enum Key{
                 return e;
             }
         }
-        throw new RuntimeException("Enum not found");
+
+        return otherKey;
     }
 }

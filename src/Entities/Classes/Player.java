@@ -15,7 +15,7 @@ public class Player extends Entity
 {
     private int power = 1;
     private int nbBombMax = 1;
-    private int speed = 5;
+    private int speed = 7;
     private int nbBombPlaced = 0;
     private int playerNumber;
     private boolean canWalkOnBomb = false;
@@ -159,7 +159,7 @@ public class Player extends Entity
      * Augment the speed of the player.
      */
     public void augmentSpeed() {
-        if(this.speed < 10)
+        if(this.speed < 12)
         this.speed++;
     }
 

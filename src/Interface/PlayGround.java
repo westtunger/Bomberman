@@ -175,6 +175,9 @@ class PlayGround extends JPanel implements ActionListener{
                 case p2PoseBomb:
                     players[1].plant();
                     break;
+
+                default:
+                    
             }
         }
     }

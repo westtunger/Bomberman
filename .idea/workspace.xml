@@ -6,10 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="Modify the bomb planting to plant it below the player, as in the classic Bomberman.&#10;Remove the KeyListener from the PlayGround class.&#10;Modify the player 2 images.&#10;Make use of the Key enum as key mapping.&#10;+ some minor changes.">
+    <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="Add an &quot;other&quot; key enum to allow .">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Player.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interface/PlayGround.java" afterPath="$PROJECT_DIR$/src/Interface/PlayGround.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KeyMapping/Key.java" afterPath="$PROJECT_DIR$/src/KeyMapping/Key.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,14 +32,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="254" column="168" lean-forward="false" selection-start-line="254" selection-start-column="168" selection-end-line="254" selection-end-column="168" />
+            <state relative-caret-position="460">
+              <caret line="136" column="38" lean-forward="false" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
               <folding>
                 <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
-                <element signature="method#processInput#0;class#PlayGround#0" expanded="false" />
+                <element signature="e#2250#2289#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="63" column="58" lean-forward="true" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+            <state relative-caret-position="286">
+              <caret line="161" column="26" lean-forward="false" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,8 +70,8 @@
       <file leaf-file-name="InputListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interface/InputListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+            <state relative-caret-position="1034">
+              <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -76,8 +80,8 @@
       <file leaf-file-name="Key.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/KeyMapping/Key.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -121,7 +125,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
               <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#566#567#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,6 +168,7 @@
         <option value="Nicolas Viseur &lt;westtunger@gmail.com&gt;" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -200,17 +207,16 @@
         <option value="$PROJECT_DIR$/src/Entities/Enum/Panels.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Entity.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
-        <option value="$PROJECT_DIR$/src/KeyMapping/Key.java" />
         <option value="$PROJECT_DIR$/src/Interface/InputListener.java" />
-        <option value="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
         <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
+        <option value="$PROJECT_DIR$/src/KeyMapping/Key.java" />
+        <option value="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+    <option name="width" value="1924" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -231,9 +237,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -342,6 +345,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -710,7 +716,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493478238187</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add a timer between the planting of two bomb to avoid unwanted planting if we keep the plant key for too long.&#10;Remove a bug causing PowerUp to be destroyed even if the explosion do not collide with it.">
+      <created>1493479363497</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1493479363497</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -723,7 +736,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="0" width="1924" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -742,8 +755,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17838405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -779,7 +792,8 @@
     <MESSAGE value="Big code cleanup." />
     <MESSAGE value="Fill the javadoc for everything done so far." />
     <MESSAGE value="Modify the bomb planting to plant it below the player, as in the classic Bomberman.&#10;Remove the KeyListener from the PlayGround class.&#10;Modify the player 2 images.&#10;Make use of the Key enum as key mapping.&#10;+ some minor changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify the bomb planting to plant it below the player, as in the classic Bomberman.&#10;Remove the KeyListener from the PlayGround class.&#10;Modify the player 2 images.&#10;Make use of the Key enum as key mapping.&#10;+ some minor changes." />
+    <MESSAGE value="Add a timer between the planting of two bomb to avoid unwanted planting if we keep the plant key for too long.&#10;Remove a bug causing PowerUp to be destroyed even if the explosion do not collide with it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a timer between the planting of two bomb to avoid unwanted planting if we keep the plant key for too long.&#10;Remove a bug causing PowerUp to be destroyed even if the explosion do not collide with it." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1040,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-20">
           <caret line="782" column="19" lean-forward="false" selection-start-line="782" selection-start-column="19" selection-end-line="782" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,7 +1108,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#566#567#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1107,39 +1122,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/KeyMapping/Key.java">
+    <entry file="file://$PROJECT_DIR$/src/Interface/InputListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="1034">
+          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/InputListener.java">
+    <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+        <state relative-caret-position="460">
+          <caret line="136" column="38" lean-forward="false" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
+          <folding>
+            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
+            <element signature="e#2250#2289#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KeyMapping/Key.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="63" column="58" lean-forward="true" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+        <state relative-caret-position="286">
+          <caret line="161" column="26" lean-forward="false" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="254" column="168" lean-forward="false" selection-start-line="254" selection-start-column="168" selection-end-line="254" selection-end-column="168" />
-          <folding>
-            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
-            <element signature="method#processInput#0;class#PlayGround#0" expanded="false" />
           </folding>
         </state>
       </provider>
