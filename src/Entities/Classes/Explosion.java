@@ -32,7 +32,7 @@ public class Explosion extends Entity {
 
         this.power--;
 
-        if (this.power > 0) {
+        if (this.dir != null && this.power > 0) {
             this.extend();
         }
 

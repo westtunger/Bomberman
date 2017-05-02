@@ -44,6 +44,7 @@ public class Bomb extends Entity {
         new Explosion(this.power, right,this.getSpot(right));
         new Explosion(this.power, down,this.getSpot(down));
         new Explosion(this.power, left,this.getSpot(left));
+        new Explosion(this.power, null,new Point(this.getPosition().x,this.getPosition().y));
 
         owner.reduceNbBombPlaced();
 

@@ -21,8 +21,13 @@ public class Player extends Entity
     private boolean canWalkOnBomb = false;
     private Direction dir = Direction.down;
     private int timer;
+    private Direction blockedDir = null;
 
-    public Player(int playerNumber,String name, Point position){
+    private void setBlockedDir(Direction blockedDir) {
+        this.blockedDir = blockedDir;
+    }
+
+    public Player(int playerNumber, String name, Point position){
         super(name,position, null);
 
         this.setPlayerNumber(playerNumber);
@@ -75,10 +80,25 @@ public class Player extends Entity
      * @param dir the direction to move in.
      * @see Direction
      */
-    public void move(Direction dir)
+    public void move(Direction dir, Player other)
     {
         this.dir = dir;
-        super.move(dir,this.speed);
+
+
+        if(blockedDir == null || blockedDir != dir)
+        {
+            super.move(dir,this.speed);
+            setBlockedDir(null);
+        }
+
+        if (this.checkCollision(other))
+        {
+            this.setPosition(this.getPosition().x-this.getDir().getDirection().x*this.speed,
+                    this.getPosition().y-this.getDir().getDirection().y*this.speed);
+
+            this.setBlockedDir(dir);
+        }
+
         if(this.playerNumber == 0)
             switch (dir)
             {
@@ -174,7 +194,7 @@ public class Player extends Entity
     /**
      * Reduce the number of bom already placed by the player.
      */
-    public void reduceNbBombPlaced() {
+    void reduceNbBombPlaced() {
         if(this.nbBombPlaced > 0)
             this.nbBombPlaced--;
     }
@@ -184,7 +204,7 @@ public class Player extends Entity
      *
      * @return the player number.
      */
-    public int getPlayerNumber() {
+    private int getPlayerNumber() {
         return playerNumber;
     }
 

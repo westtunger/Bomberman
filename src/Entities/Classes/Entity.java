@@ -39,7 +39,7 @@ public abstract class Entity{
      * Give the name of the entity.
      * @return the name of the entity.
      */
-    public String getName() {
+    private String getName() {
         return this.name;
     }
 

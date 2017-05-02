@@ -137,19 +137,19 @@ class PlayGround extends JPanel implements ActionListener{
             switch (Key.fromCode(code))
             {
                 case p1Down:
-                    players[0].move(down);
+                    players[0].move(down,players[1]);
                     break;
 
                 case p1Up:
-                    players[0].move(up);
+                    players[0].move(up,players[1]);
                     break;
 
                 case p1Left:
-                    players[0].move(left);
+                    players[0].move(left,players[1]);
                     break;
 
                 case p1Right:
-                    players[0].move(right);
+                    players[0].move(right,players[1]);
                     break;
 
                 case p1PoseBomb:
@@ -157,19 +157,19 @@ class PlayGround extends JPanel implements ActionListener{
                     break;
 
                 case p2Down:
-                    players[1].move(down);
+                    players[1].move(down,players[0]);
                     break;
 
                 case p2Up:
-                    players[1].move(up);
+                    players[1].move(up,players[0]);
                     break;
 
                 case p2Left:
-                    players[1].move(left);
+                    players[1].move(left,players[0]);
                     break;
 
                 case p2Right:
-                    players[1].move(right);
+                    players[1].move(right,players[0]);
                     break;
 
                 case p2PoseBomb:
@@ -195,9 +195,10 @@ class PlayGround extends JPanel implements ActionListener{
             {
                 if(players[l].checkCollision(entity))
                 {
-                    if(entity != players[l] && !(entity instanceof Explosion)
+                    if(!(entity instanceof Explosion)
                             && !(entity instanceof PowerUp)
-                            && !(entity instanceof Bomb && ((Bomb)entity).getOwner().equals(players[l]) && players[l].isCanWalkOnBomb()))
+                            && !(entity instanceof Bomb && ((Bomb)entity).getOwner().equals(players[l]) && players[l].isCanWalkOnBomb())
+                            && !(entity instanceof  Player))
                     {
                         switch (players[l].getDir())
                         {
