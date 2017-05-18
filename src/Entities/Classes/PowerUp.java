@@ -1,7 +1,6 @@
 package Entities.Classes;
 
-import Entities.Enum.Images;
-import Entities.Enum.PowerUpTypes;
+import Entities.SpriteManager;
 
 import java.awt.*;
 
@@ -12,17 +11,18 @@ import java.awt.*;
  * @version 1.0
  */
 public class PowerUp extends Entity{
-    private final PowerUpTypes type;
-    private boolean invinsible;
+    public static final int POWER = 0;
+    public static final int BOMB = 1;
+    public static final int SPEED = 2;
+    private final int type;
+    private boolean invincible;
     private int timer = 20;
 
-    public PowerUp(PowerUpTypes type, Point pos)
+    public PowerUp(int type, Point pos)
     {
-        super("PowerUp",pos,null);
+        super("PowerUp",pos,0);
         this.type = type;
-        this.invinsible = true;
-
-        this.setImages(this.getPowerUpImages(type));
+        this.invincible = true;
     }
 
     @Override
@@ -34,45 +34,25 @@ public class PowerUp extends Entity{
         }
         else
         {
-            this.invinsible = false;
+            this.invincible = false;
         }
     }
 
-    public boolean isInvinsible() {
-        return invinsible;
-    }
-
-    /**
-     * Return the images needed in function of the type.
-     * @param type the type of the power up.
-     * @return the images needed.
-     * @see PowerUpTypes
-     */
-    private Images getPowerUpImages(PowerUpTypes type)
-    {
-        switch (type)
-        {
-            case power:
-                return Images.powerUp;
-
-            case bomb:
-                return Images.bombUp;
-
-            case speed:
-                return Images.speedUp;
-
-            default:
-                return null;
-        }
+    public boolean isInvincible() {
+        return invincible;
     }
 
     /**
      * Give the type of this power up.
      * @return the type of the power up.
-     * @see PowerUpTypes
      */
-    public PowerUpTypes getType()
+    public int getType()
     {
         return this.type;
+    }
+
+    @Override
+    public Image getImage() {
+        return SpriteManager.getSprite(this.getType(),11);
     }
 }

@@ -1,9 +1,10 @@
 package Entities.Classes;
 
 import Entities.Enum.Direction;
-import Entities.Enum.Images;
+import Entities.SpriteManager;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Player Object.
@@ -13,29 +14,30 @@ import java.awt.*;
  */
 public class Player extends Entity
 {
+    private static int nbPlayers;
+
+    private final ArrayList<Bomb> bombs;
+    private final int powerMax = 5;
+    private final int speedMax = 12;
+    private final int nbBombMax = 5;
+    private int nbBomb = 1;
     private int power = 1;
-    private int nbBombMax = 1;
     private int speed = 7;
-    private int nbBombPlaced = 0;
-    private int playerNumber;
-    private boolean canWalkOnBomb = false;
+    private final int playerNumber;
+
+    private boolean walkingOnBombs = false;
     private Direction dir = Direction.down;
     private int timer;
-    private Direction blockedDir = null;
 
-    private void setBlockedDir(Direction blockedDir) {
-        this.blockedDir = blockedDir;
+    public Player(String name, Point position){
+        super(name,position,8);
+        nbPlayers++;
+        this.bombs  = new ArrayList<>();
+        this.playerNumber = nbPlayers;
     }
 
-    public Player(int playerNumber, String name, Point position){
-        super(name,position, null);
-
-        this.setPlayerNumber(playerNumber);
-        this.setImages(this.getPlayerImages(playerNumber));
-    }
-
-    public boolean isCanWalkOnBomb() {
-        return canWalkOnBomb;
+    public boolean isWalkingOnBombs() {
+        return walkingOnBombs;
     }
 
     @Override
@@ -44,20 +46,19 @@ public class Player extends Entity
         if(timer > 0)
             timer--;
 
+        for(Bomb bomb : new ArrayList<>(bombs))
+        {
+            if(bomb.isDestroyed())
+                bombs.remove(bomb);
+        }
 
-        boolean coll = false;
+        Entity entity = this.checkCollision();
 
-        if(this.canWalkOnBomb)
-            for(Entity entity : Entity.getEntities())
+        if(this.walkingOnBombs)
+            if(entity == null && !(entity instanceof Bomb) && !(bombs.contains(entity)))
             {
-                if(entity instanceof Bomb && ((Bomb)entity).getOwner().equals(this) && this.checkCollision(entity))
-                {
-                    coll = true;
-                }
+                this.walkingOnBombs = false;
             }
-
-        if(!coll)
-            this.canWalkOnBomb = false;
     }
 
     /**
@@ -66,12 +67,12 @@ public class Player extends Entity
      */
     public void plant()
     {
-        if(this.nbBombPlaced<this.nbBombMax && timer == 0)
+        if(this.bombs.size() < this.nbBomb && timer == 0)
         {
             timer = 10;
-            this.augmentNbBombPlaced();
-            new Bomb(this.power, new Point(this.getPosition().x,this.getPosition().y),this);
-            this.canWalkOnBomb = true;
+
+            this.bombs.add(new Bomb(this.power, new Point(this.getPosition())));
+            this.walkingOnBombs = true;
         }
     }
 
@@ -80,123 +81,74 @@ public class Player extends Entity
      * @param dir the direction to move in.
      * @see Direction
      */
-    public void move(Direction dir, Player other)
+    public void move(Direction dir)
     {
         this.dir = dir;
 
-
-        if(blockedDir == null || blockedDir != dir)
-        {
-            super.move(dir,this.speed);
-            setBlockedDir(null);
-        }
-
-        if (this.checkCollision(other))
-        {
-            this.setPosition(this.getPosition().x-this.getDir().getDirection().x*this.speed,
-                    this.getPosition().y-this.getDir().getDirection().y*this.speed);
-
-            this.setBlockedDir(dir);
-        }
-
-        if(this.playerNumber == 0)
-            switch (dir)
-            {
-                case down:
-                    this.setImages(Images.playerOneFront);
-                    break;
-
-                case left:
-                    this.setImages(Images.playerOneLeft);
-                    break;
-
-                case right:
-                    this.setImages(Images.playerOneRight);
-                    break;
-
-                case up:
-                    this.setImages(Images.playerOneBack);
-                    break;
-            }
-        else
-            switch (dir)
-            {
-                case down:
-                    this.setImages(Images.playerTwoFront);
-                    break;
-
-                case left:
-                    this.setImages(Images.playerTwoLeft);
-                    break;
-
-                case right:
-                    this.setImages(Images.playerTwoRight);
-                    break;
-
-                case up:
-                    this.setImages(Images.playerTwoBack);
-                    break;
-            }
+        processMove();
     }
 
     /**
-     * Return the images needed in function of the player number.
-     * @param number the number of the player.
-     * @return the images needed.
+     * Move in a given direction according to the player speed.
      */
-    private Images getPlayerImages(int number)
+    public void processMove() {
+        this.getPosition().x += this.dir.getDirection().getX()*this.speed;
+        this.getPosition().y += this.dir.getDirection().getY()*this.speed;
+    }
+
+    /**
+     * Cancel the last move.
+     */
+    public void cancelMove() {
+        this.getPosition().x -= this.dir.getDirection().getX()*this.speed;
+        this.getPosition().y -= this.dir.getDirection().getY()*this.speed;
+    }
+
+    /**
+     * Pick up a given power up and apply the correct bonus to the player.
+     * @param powerUp the powerup to pick up.
+     * @see PowerUp
+     */
+    public void pickUpPowerUp(PowerUp powerUp)
     {
-        if(number == 0)
-            return Images.playerOneFront;
-        else
-            return Images.playerTwoFront;
+        switch (powerUp.getType())
+        {
+            case PowerUp.BOMB:
+                this.augmentNbBomb();
+                break;
+
+            case PowerUp.POWER:
+                this.augmentPower();
+                break;
+
+            case PowerUp.SPEED:
+                this.augmentSpeed();
+                break;
+        }
     }
 
     /**
      * Augment the power of the bomb who can be planted by the player.
      */
     public void augmentPower() {
-        if(this.power <5)
+        if(this.power <this.powerMax)
             this.power++;
-    }
-
-    /**
-     * Return the maximum number of bomb usable at the same time by the player.
-     */
-    private int getNbBombMax() {
-        return nbBombMax;
     }
 
     /**
      * Augment the maximum number of bomb usable at the same time by the player.
      */
-    public void augmentNbBombMax() {
-        if(this.nbBombMax < 5)
-            this.nbBombMax++;
+    public void augmentNbBomb() {
+        if(this.nbBomb < this.nbBombMax)
+            this.nbBomb++;
     }
 
     /**
      * Augment the speed of the player.
      */
     public void augmentSpeed() {
-        if(this.speed < 12)
+        if(this.speed < this.speedMax)
         this.speed++;
-    }
-
-    /**
-     * Augment the number of bom already placed by the player.
-     */
-    private void augmentNbBombPlaced() {
-        if(this.nbBombPlaced < this.getNbBombMax())
-            this.nbBombPlaced++;
-    }
-
-    /**
-     * Reduce the number of bom already placed by the player.
-     */
-    void reduceNbBombPlaced() {
-        if(this.nbBombPlaced > 0)
-            this.nbBombPlaced--;
     }
 
     /**
@@ -204,32 +156,14 @@ public class Player extends Entity
      *
      * @return the player number.
      */
-    private int getPlayerNumber() {
+    public int getPlayerNumber() {
         return playerNumber;
-    }
-
-    /**
-     * Give the direction of the player.
-     * @return the direction of the player.
-     * @see Direction
-     */
-    public Direction getDir()
-    {
-        return this.dir;
-    }
-
-    /**
-     * Set the player number.
-     * @param playerNumber the number of the player.
-     */
-    private void setPlayerNumber(int playerNumber) {
-        this.playerNumber = playerNumber;
     }
 
     @Override
     public Rectangle getBBox()
     {
-        return new Rectangle(this.getPosition().x,this.getPosition().y, Interface.Window.getWindowSize().width/20, Interface.Window.getWindowSize().width/20);
+        return new Rectangle(this.getPosition().x,this.getPosition().y, Visual.Window.getWindowSize().width/20, Visual.Window.getWindowSize().width/20);
     }
 
     public boolean equals(Object o)
@@ -240,5 +174,43 @@ public class Player extends Entity
         }
 
         return false;
+    }
+
+    /**
+     * Reset the number of players.
+     */
+    public static void resetNumbers()
+    {
+        nbPlayers = 0;
+    }
+
+    @Override
+    public Image getImage() {
+        int y=this.getPlayerNumber() == 1 ? 0 : 4;
+
+        switch (this.dir)
+        {
+            case up:
+                    y+=1;
+                break;
+
+            case down:
+                    y+=0;
+                break;
+
+            case left:
+                    y+=2;
+                    break;
+
+            case right:
+                    y+=3;
+                break;
+        }
+
+        return SpriteManager.getSprite(this.getImageIndex(),y);
+    }
+
+    public ArrayList<Bomb> getBombs() {
+        return bombs;
     }
 }

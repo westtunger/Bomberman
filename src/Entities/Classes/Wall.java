@@ -1,7 +1,6 @@
 package Entities.Classes;
 
-import Entities.Enum.Images;
-import Entities.Enum.PowerUpTypes;
+import Entities.SpriteManager;
 
 import java.awt.*;
 
@@ -17,22 +16,9 @@ public class Wall extends Entity{
 
     public Wall(boolean breakable, Point pos)
     {
-        super("Wall",pos, null);
+        super("Wall",pos,0);
 
         this.isBreakable = breakable;
-        this.setImages(this.getWallImages(this.isBreakable));
-    }
-
-    /**
-     * Return the images needed in function of the wall.
-     * @param breakable the possibility to break the wall.
-     */
-    private Images getWallImages(boolean breakable)
-    {
-        if(breakable)
-            return Images.breakableWall;
-        else
-            return Images.unbreakableWall;
     }
 
     @Override
@@ -49,8 +35,7 @@ public class Wall extends Entity{
         return this.isBreakable;
     }
 
-    @Override
-    public void destroy()
+    private void dropPowerUp()
     {
         int dropPowerUp = (int)(Math.random()*100);
         int powerUpType = (int)(Math.random()*100);
@@ -59,18 +44,29 @@ public class Wall extends Entity{
         {
             if(powerUpType > 66)
             {
-                new PowerUp(PowerUpTypes.bomb,this.getPosition());
+                new PowerUp(PowerUp.BOMB,this.getPosition());
             }
             else if( powerUpType > 33)
             {
-                new PowerUp(PowerUpTypes.power,this.getPosition());
+                new PowerUp(PowerUp.POWER,this.getPosition());
             }
             else
             {
-                new PowerUp(PowerUpTypes.speed,this.getPosition());
+                new PowerUp(PowerUp.SPEED,this.getPosition());
             }
         }
+    }
+
+    @Override
+    public void destroy()
+    {
+        this.dropPowerUp();
 
         super.destroy();
+    }
+
+    @Override
+    public Image getImage() {
+        return SpriteManager.getSprite(this.isBreakable() ? 0 : 1,8);
     }
 }

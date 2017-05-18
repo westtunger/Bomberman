@@ -1,6 +1,6 @@
 package Main;
 
-import Interface.Window;
+import Visual.Window;
 
 /**
  * Main.Main class.

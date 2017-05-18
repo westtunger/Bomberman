@@ -1,7 +1,7 @@
 package Entities.Classes;
 
 import Entities.Enum.Direction;
-import Entities.Enum.Images;
+import Entities.SpriteManager;
 
 import java.awt.*;
 
@@ -19,7 +19,7 @@ public class Explosion extends Entity {
 
     public Explosion(int power, Direction dir, Point pos)
     {
-        super("Explosion",pos, Images.explosion);
+        super("Explosion",pos,5);
 
         this.power = power;
         this.dir = dir;
@@ -42,17 +42,22 @@ public class Explosion extends Entity {
         }
     }
 
-    @Override
-    public Rectangle getBBox()
-    {
-        return new Rectangle(this.getPosition().x,this.getPosition().y, Interface.Window.getWindowSize().width/20, Interface.Window.getWindowSize().width/20);
-    }
-
     /**
      * Extend the explosion area of effect, reducing the power every time.
      */
     private void extend()
     {
         new Explosion(this.power, this.dir,this.getSpot(this.dir));
+    }
+
+    @Override
+    public Image getImage() {
+        return SpriteManager.getSprite(this.getImageIndex(),10);
+    }
+
+    @Override
+    public Rectangle getBBox()
+    {
+        return new Rectangle(this.getPosition().x,this.getPosition().y, Visual.Window.getWindowSize().width/20, Visual.Window.getWindowSize().width/20);
     }
 }

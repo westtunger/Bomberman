@@ -1,11 +1,10 @@
 package Entities.Classes;
 
-import Interface.Window;
+import Entities.SpriteManager;
 
 import java.awt.*;
 
 import static Entities.Enum.Direction.*;
-import static Entities.Enum.Images.bomb;
 
 /**
  * Bomb Class.
@@ -17,13 +16,16 @@ public class Bomb extends Entity {
 
     private final int power;
     private int timer = 35;
-    private final Player owner;
+    private boolean destroyed = false;
 
-    public Bomb(int power, Point pos, Player owner)
+    public Bomb(int power, Point pos)
     {
-        super("Bomb",pos, bomb);
+        super("Bomb",pos,4);
         this.power = power;
-        this.owner = owner;
+    }
+
+    public boolean isDestroyed() {
+        return destroyed;
     }
 
     @Override
@@ -46,9 +48,9 @@ public class Bomb extends Entity {
         new Explosion(this.power, left,this.getSpot(left));
         new Explosion(this.power, null,new Point(this.getPosition().x,this.getPosition().y));
 
-        owner.reduceNbBombPlaced();
-
         this.destroy();
+
+        destroyed = true;
     }
 
     @Override
@@ -66,13 +68,13 @@ public class Bomb extends Entity {
     }
 
     @Override
-    public Rectangle getBBox()
-    {
-        return new Rectangle(this.getPosition().x,this.getPosition().y, Window.getWindowSize().width/20,Window.getWindowSize().width/20);
+    public Image getImage() {
+        return SpriteManager.getSprite(this.getImageIndex(),9);
     }
 
-    public Player getOwner()
+    @Override
+    public Rectangle getBBox()
     {
-        return this.owner;
+        return new Rectangle(this.getPosition().x,this.getPosition().y, Visual.Window.getWindowSize().width/20, Visual.Window.getWindowSize().width/20);
     }
 }

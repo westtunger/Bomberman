@@ -7,13 +7,181 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="Change the way collision between players work to fix some bugs.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Blocks/BT.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Blocks/BW.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Blocks/Portal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Blocks/SW.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomb/B1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomb/B2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomb/B3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomb/B4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Back/S8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Front/S8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Left/S8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman/Right/S8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Back/S1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Back/S2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Back/S3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Back/S4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Back/S5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Back/S6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Back/S7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Back/S8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Front/S1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Front/S2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Front/S3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Front/S4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Front/S5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Front/S6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Front/S7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Front/S8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Left/S1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Left/S2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Left/S3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Left/S4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Left/S5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Left/S6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Left/S7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Left/S8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Right/S1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Right/S2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Right/S3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Right/S4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Right/S5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Right/S6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Right/S7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Bomberman2/Right/S8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Flame/F1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Flame/F2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Flame/F3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Flame/F4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Flame/F5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Menu/Control_PlayerOne.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Menu/Control_PlayerTwo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Menu/One_Player_Hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Menu/One_Player_Normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Menu/Two_Players_Hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Menu/Two_Players_Normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Menu/title_background.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Menu/title_titletext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Powerups/PUBomb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Powerups/PUPower.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprites/Powerups/PUSpeed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/PowerUp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Enum/Images.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Enum/Panels.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Enum/PowerUpTypes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/Menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/PlayGround.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/Window$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BomberMan/Interface/Window.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Entities/Enum/Images.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Entities/Enum/Panels.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Entities/Enum/PowerUpTypes.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Interface/InputListener.java" afterPath="$PROJECT_DIR$/src/Visual/InputListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Interface/Menu.java" afterPath="$PROJECT_DIR$/src/Visual/Menu.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Interface/PlayGround.java" afterPath="$PROJECT_DIR$/src/Visual/PlayGround.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Interface/Window.java" afterPath="$PROJECT_DIR$/src/Visual/Window.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Entity.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Entity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Explosion.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Explosion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/PowerUp.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/PowerUp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Wall.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Wall.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/Bomb.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/Bomb.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/Entity.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/Entity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/Explosion.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/Explosion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/Player.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/Player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/PowerUp.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/PowerUp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/Wall.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/Wall.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/package-frame.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/package-summary.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Classes/package-tree.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Classes/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Enum/Direction.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Enum/Direction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Enum/package-frame.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Enum/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Enum/package-summary.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Enum/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Enum/package-tree.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Enum/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Interface/EntityInterface.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Interface/EntityInterface.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Interface/package-frame.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Interface/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Interface/package-summary.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Interface/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/Interface/package-tree.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/Interface/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/package-frame.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/package-summary.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Entities/package-tree.html" afterPath="$PROJECT_DIR$/Javadoc/Entities/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Interface/Window.html" afterPath="$PROJECT_DIR$/Javadoc/Interface/Window.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Interface/package-frame.html" afterPath="$PROJECT_DIR$/Javadoc/Interface/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Interface/package-summary.html" afterPath="$PROJECT_DIR$/Javadoc/Interface/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Interface/package-tree.html" afterPath="$PROJECT_DIR$/Javadoc/Interface/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/KeyMapping/Key.html" afterPath="$PROJECT_DIR$/Javadoc/KeyMapping/Key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/KeyMapping/package-frame.html" afterPath="$PROJECT_DIR$/Javadoc/KeyMapping/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/KeyMapping/package-summary.html" afterPath="$PROJECT_DIR$/Javadoc/KeyMapping/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/KeyMapping/package-tree.html" afterPath="$PROJECT_DIR$/Javadoc/KeyMapping/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Main/package-frame.html" afterPath="$PROJECT_DIR$/Javadoc/Main/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Main/package-summary.html" afterPath="$PROJECT_DIR$/Javadoc/Main/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/Main/package-tree.html" afterPath="$PROJECT_DIR$/Javadoc/Main/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/Javadoc/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/Javadoc/allclasses-noframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/constant-values.html" afterPath="$PROJECT_DIR$/Javadoc/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/deprecated-list.html" afterPath="$PROJECT_DIR$/Javadoc/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/help-doc.html" afterPath="$PROJECT_DIR$/Javadoc/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-1.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-10.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-11.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-12.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-13.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-14.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-14.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-15.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-15.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-16.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-16.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-2.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-3.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-4.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-5.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-6.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-7.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-8.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index-files/index-9.html" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/index.html" afterPath="$PROJECT_DIR$/Javadoc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/overview-frame.html" afterPath="$PROJECT_DIR$/Javadoc/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/overview-summary.html" afterPath="$PROJECT_DIR$/Javadoc/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/Javadoc/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/package-list" afterPath="$PROJECT_DIR$/Javadoc/package-list" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javadoc/serialized-form.html" afterPath="$PROJECT_DIR$/Javadoc/serialized-form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Entity.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Entity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Player.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interface/PlayGround.java" afterPath="$PROJECT_DIR$/src/Interface/PlayGround.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Wall.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Wall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Main.java" afterPath="$PROJECT_DIR$/src/Main/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,118 +200,37 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
+      <file leaf-file-name="PlayGround.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Visual/PlayGround.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-706">
-              <caret line="140" column="26" lean-forward="true" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
+            <state relative-caret-position="409">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
                 <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
-                <element signature="e#2250#2289#1" expanded="true" />
+                <element signature="method#actionPerformed#0;class#PlayGround#0" expanded="false" />
+                <element signature="method#processInput#0;class#PlayGround#0" expanded="false" />
+                <element signature="method#processTick#0;class#PlayGround#0" expanded="false" />
+                <element signature="method#processCollision#0;class#PlayGround#0" expanded="false" />
+                <element signature="method#processPlayerCollision#0;class#PlayGround#0" expanded="false" />
+                <element signature="method#processExplosionCollision#0;class#PlayGround#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Entity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Entity.java">
+      <file leaf-file-name="Wall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Wall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+            <state relative-caret-position="392">
+              <caret line="69" column="57" lean-forward="false" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#989#990#0" expanded="true" />
-                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="method#dropPowerUp#0;class#Wall#0" expanded="false" />
+                <element signature="method#destroy#0;class#Wall#0" expanded="false" />
+                <element signature="e#1290#1291#0" expanded="true" />
+                <element signature="e#1366#1367#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Explosion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Explosion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="236" column="8" lean-forward="false" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#5052#5053#0" expanded="true" />
-                <element signature="e#5087#5088#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Interface/InputListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1034">
-              <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Key.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/KeyMapping/Key.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PowerUpTypes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Enum/PowerUpTypes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Images.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Images.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-              <folding>
-                <element signature="e#3387#3388#0" expanded="true" />
-                <element signature="e#3421#3422#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Direction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Direction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bomb.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Bomb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -166,7 +253,14 @@
       <find>Direction.</find>
       <find>Panels.</find>
       <find>getPosition()</find>
+      <find>nbBombMax</find>
+      <find>players[l]</find>
+      <find>get</find>
+      <find>playerNumber</find>
     </findStrings>
+    <replaceStrings>
+      <replace>player</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -204,25 +298,32 @@
         <option value="$PROJECT_DIR$/src/Entities/Enum/PowerUpTypes.java" />
         <option value="$PROJECT_DIR$/src/Interface/Menu.java" />
         <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/Entities/Classes/Wall.java" />
         <option value="$PROJECT_DIR$/src/Entities/Enum/Direction.java" />
         <option value="$PROJECT_DIR$/src/Entities/Enum/Images.java" />
-        <option value="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" />
         <option value="$PROJECT_DIR$/src/Interface/Window.java" />
         <option value="$PROJECT_DIR$/src/Entities/Enum/Panels.java" />
         <option value="$PROJECT_DIR$/src/Interface/InputListener.java" />
         <option value="$PROJECT_DIR$/src/KeyMapping/Key.java" />
+        <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
+        <option value="$PROJECT_DIR$/src/Visual/InputListener.java" />
+        <option value="$PROJECT_DIR$/src/Visual/Menu.java" />
+        <option value="$PROJECT_DIR$/src/Entities/EntityManager.java" />
+        <option value="$PROJECT_DIR$/src/Entities/SpriteManager.java" />
+        <option value="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" />
-        <option value="$PROJECT_DIR$/src/Interface/PlayGround.java" />
-        <option value="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
+        <option value="$PROJECT_DIR$/src/Visual/PlayGround.java" />
+        <option value="$PROJECT_DIR$/src/Entities/Classes/Wall.java" />
+        <option value="$PROJECT_DIR$/src/Visual/Window.java" />
         <option value="$PROJECT_DIR$/src/Entities/Classes/Entity.java" />
+        <option value="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
-    <option name="width" value="1924" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -243,6 +344,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,22 +371,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KeyMapping" />
+              <option name="myItemId" value="Visual" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,8 +389,22 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Interface" />
+              <option name="myItemId" value="Bomberman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomberman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -349,11 +452,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomberman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomberman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sprites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -743,7 +858,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493734535675</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Change the way collision between players work to fix some bugs.">
+      <created>1493737049817</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1493737049817</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -756,7 +878,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="0" width="1924" height="1048" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -768,7 +890,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -778,11 +900,12 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20965971" sideWeight="0.49322918" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19868277" sideWeight="0.49322918" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17838405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37650934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -792,6 +915,41 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.50677085" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2766191" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20965971" sideWeight="0.49322918" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37650934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -824,7 +982,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="67" />
+      <option name="time" value="76" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -835,68 +993,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/PowerUpTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Bomb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Images.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="86" lean-forward="false" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="93" column="32" lean-forward="false" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/Window.java">
+    <entry file="file://$PROJECT_DIR$/src/Visual/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
@@ -917,13 +1019,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Images.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Images.java" />
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
@@ -993,13 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Levels/level0.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1035,33 +1124,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Levels/level2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/PowerUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,114 +1138,210 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Panels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/PowerUpTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Images.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-          <folding>
-            <element signature="e#3387#3388#0" expanded="true" />
-            <element signature="e#3421#3422#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="630">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/InputListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KeyMapping/Key.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
+        <state relative-caret-position="819">
           <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Panels.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/awt/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="91" column="11" lean-forward="false" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/PowerUpTypes.java" />
+    <entry file="file://$PROJECT_DIR$/Javadoc/Entities/Enum/PowerUpTypes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javadoc/Entities/Classes/PowerUp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="142" column="107" lean-forward="false" selection-start-line="142" selection-start-column="107" selection-end-line="142" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visual/InputListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visual/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="850" column="0" lean-forward="false" selection-start-line="850" selection-start-column="0" selection-end-line="850" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/awt/image/BufferedImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="1199" column="25" lean-forward="false" selection-start-line="1199" selection-start-column="25" selection-end-line="1199" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/PowerUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="method#tick#0;class#PowerUp#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Enum/Images.java" />
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Bomb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        <state relative-caret-position="627">
+          <caret line="78" column="5" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interface/PlayGround.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-706">
-          <caret line="140" column="26" lean-forward="true" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
-          <folding>
-            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
-            <element signature="e#2250#2289#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Explosion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
+    <entry file="file://$PROJECT_DIR$/Sprites/SpriteSheet.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/SpriteManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="236" column="8" lean-forward="false" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="8" />
+        <state relative-caret-position="280">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#5052#5053#0" expanded="true" />
-            <element signature="e#5087#5088#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="69" column="57" lean-forward="false" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
+          <folding>
+            <element signature="method#dropPowerUp#0;class#Wall#0" expanded="false" />
+            <element signature="method#destroy#0;class#Wall#0" expanded="false" />
+            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+        <state relative-caret-position="183">
+          <caret line="69" column="18" lean-forward="false" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Classes/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#tick#0;class#Player#0" expanded="false" />
+            <element signature="method#plant#0;class#Player#0" expanded="false" />
+            <element signature="method#move#0;class#Player#0" expanded="false" />
+            <element signature="method#processMove#0;class#Player#0" expanded="false" />
+            <element signature="method#cancelMove#0;class#Player#0" expanded="false" />
+            <element signature="method#pickUpPowerUp#0;class#Player#0" expanded="false" />
+            <element signature="method#augmentPower#0;class#Player#0" expanded="false" />
+            <element signature="method#augmentNbBomb#0;class#Player#0" expanded="false" />
+            <element signature="method#augmentSpeed#0;class#Player#0" expanded="false" />
+            <element signature="method#getBBox#0;class#Player#0" expanded="false" />
+            <element signature="method#equals#0;class#Player#0" expanded="false" />
+            <element signature="method#getImage#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visual/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="method#changePanel#0;class#Window#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#EntityManager#0;class#EntityManager#0" expanded="false" />
+            <element signature="method#removeEntity#0;class#EntityManager#0" expanded="false" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding>
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visual/PlayGround.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#paintComponent#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#createLevel#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#processInput#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#processTick#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#processCollision#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#processPlayerCollision#0;class#PlayGround#0" expanded="false" />
+            <element signature="method#processExplosionCollision#0;class#PlayGround#0" expanded="false" />
           </folding>
         </state>
       </provider>
