@@ -7,18 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9428cf8d-971d-498e-87bf-1130840649e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Entity.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Entity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Wall.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Wall.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BomberMan_jar/BomberMan.jar" afterPath="$PROJECT_DIR$/out/artifacts/BomberMan_jar/BomberMan.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Bomb.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Explosion.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/Explosion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/PowerUp.class" afterPath="$PROJECT_DIR$/out/production/BomberMan/Entities/Classes/PowerUp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Bomb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Entity.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Explosion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Player.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/PowerUp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Classes/Wall.java" afterPath="$PROJECT_DIR$/src/Entities/Classes/Wall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/EntityManager.java" afterPath="$PROJECT_DIR$/src/Entities/EntityManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Visual/PlayGround.java" afterPath="$PROJECT_DIR$/src/Visual/PlayGround.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -845,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495087982324</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refactor some parts of the code.&#10;Use the Singleton pattern with the EntityManager.&#10;Use a layers system to allow a better collision handling.">
+      <created>1498043943286</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1498043943286</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -955,7 +955,8 @@
     <MESSAGE value="Explosion stop spreading after encountering a wall. ( no more entire row of wall destroyed at once )" />
     <MESSAGE value="Change the way collision between players work to fix some bugs." />
     <MESSAGE value="Refactor some parts of the code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor some parts of the code." />
+    <MESSAGE value="Refactor some parts of the code.&#10;Use the Singleton pattern with the EntityManager.&#10;Use a layers system to allow a better collision handling." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor some parts of the code.&#10;Use the Singleton pattern with the EntityManager.&#10;Use a layers system to allow a better collision handling." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
