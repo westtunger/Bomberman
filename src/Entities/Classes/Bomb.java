@@ -12,7 +12,7 @@ import static Entities.Enum.Direction.*;
  * Bomb Class.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 public class Bomb extends Entity{
 
@@ -26,6 +26,10 @@ public class Bomb extends Entity{
         this.power = power;
     }
 
+    /**
+     * return the boolean telling if the object have been destroyed or not.
+     * @return the boolean telling if the object have been destroyed or not.
+     */
     public boolean isDestroyed() {
         return destroyed;
     }
@@ -77,6 +81,11 @@ public class Bomb extends Entity{
         destroyed = true;
     }
 
+    /**
+     * Check if the bomb still have any collision.
+     * If not, change the layer to collidable.
+     * @see Layers
+     */
     public void processCollision()
     {
         if(this.checkCollision() == null)

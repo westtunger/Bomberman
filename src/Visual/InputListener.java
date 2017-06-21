@@ -10,13 +10,13 @@ import static KeyMapping.Key.*;
  * Input Listener.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 class InputListener implements KeyListener {
-    private final ArrayList<Integer> keys;
+    private final ArrayList<Integer> inputs;
 
     public InputListener() {
-        keys = new ArrayList<>();
+        inputs = new ArrayList<>();
     }
 
     @Override
@@ -24,58 +24,75 @@ class InputListener implements KeyListener {
 
     }
 
-    public void addKey(Integer key)
+    /**
+     * Add a new inputs in the inputs list.
+     * @param input The inputs to add.
+     */
+    public void addInput(Integer input)
     {
-        keys.add(key);
+        inputs.add(input);
     }
 
-    public ArrayList<Integer> getKeys()
+    /**
+     * Return the list containing all the inputs waiting to be processed.
+     * @return The list containing all the inputs waiting to be processed.
+     */
+    public ArrayList<Integer> getInputs()
     {
-        return new ArrayList<>(keys);
+        return new ArrayList<>(inputs);
     }
 
-    public boolean containKey(Integer key)
+    /**
+     * Look if the inputs list contain the given input.
+     * @param input The input to look for.
+     * @return True if the input is in the list, else false.
+     */
+    public boolean containInput(Integer input)
     {
-        return keys.contains(key);
+        return inputs.contains(input);
     }
 
-    public void removeKey(Integer key)
+    /**
+     * Remove the given input from the list.
+     * @param input The input to remove.
+     */
+    public void removeInput(Integer input)
     {
-        keys.remove(key);
+        inputs.remove(input);
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == p1Up.getCode() || e.getKeyCode() == p1Down.getCode() || e.getKeyCode() == p1Left.getCode() || e.getKeyCode() == p1Right.getCode())
         {
-            removeKey(p1Up.getCode());
+            removeInput(p1Up.getCode());
 
-            removeKey(p1Down.getCode());
+            removeInput(p1Down.getCode());
 
-            removeKey(p1Left.getCode());
+            removeInput(p1Left.getCode());
 
-            removeKey(p1Right.getCode());
+            removeInput(p1Right.getCode());
 
-            addKey(e.getKeyCode());
+            addInput(e.getKeyCode());
         }
         else if(e.getKeyCode() == p2Up.getCode() || e.getKeyCode() == p2Down.getCode() || e.getKeyCode() == p2Left.getCode() || e.getKeyCode() == p2Right.getCode())
         {
-            removeKey(p2Up.getCode());
+            removeInput(p2Up.getCode());
 
-            removeKey(p2Down.getCode());
+            removeInput(p2Down.getCode());
 
-            removeKey(p2Left.getCode());
+            removeInput(p2Left.getCode());
 
-            removeKey(p2Right.getCode());
+            removeInput(p2Right.getCode());
 
-            addKey(e.getKeyCode());
+            addInput(e.getKeyCode());
         }
-        else if(!containKey(e.getKeyCode()))
-            addKey(e.getKeyCode());
+        else if(!containInput(e.getKeyCode()))
+            addInput(e.getKeyCode());
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        removeKey(e.getKeyCode());
+        removeInput(e.getKeyCode());
     }
 }

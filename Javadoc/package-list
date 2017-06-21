@@ -1,6 +1,7 @@
 Entities
 Entities.Classes
 Entities.Enum
+Entities.Interfaces
 KeyMapping
 Main
 Visual

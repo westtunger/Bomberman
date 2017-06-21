@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * Player Object.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 public class Player extends Entity
 {
@@ -201,6 +201,10 @@ public class Player extends Entity
         return SpriteManager.getSprite(this.getImageIndex(),y);
     }
 
+    /**
+     * Return the list containing all the bomb the player have planted.
+     * @return The list of bombs.
+     */
     public ArrayList<Bomb> getBombs() {
         return bombs;
     }
@@ -210,6 +214,10 @@ public class Player extends Entity
         this.destroy();
     }
 
+    /**
+     * Return the the number of the other. Used to get the winner at the end of the game.
+     * @return The other player's number.
+     */
     public int getOtherPlayerNumber()
     {
         return this.getPlayerNumber() == 2 ? 1 : 2;

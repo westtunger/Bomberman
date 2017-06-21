@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Entity Class.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 public abstract class Entity implements Layers, Explodable{
     private final int nbAnim;

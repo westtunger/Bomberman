@@ -9,7 +9,7 @@ import java.awt.*;
  * PowerUp Class.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 public class PowerUp extends Entity {
     public static final int POWER = 0;

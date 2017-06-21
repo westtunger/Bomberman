@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
  * Menu Class.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 class Menu extends JPanel implements ActionListener{
     private final JButton play = new JButton("Play");
@@ -18,10 +18,7 @@ class Menu extends JPanel implements ActionListener{
 
     public Menu(Window window)
     {
-
         this.window = window;
-
-        //this.setBorder(BorderFactory.createEmptyBorder(screenSize.width/8,screenSize.width/8,screenSize.width/8,screenSize.width/8));
 
         this.setLayout(new GridLayout(5,0));
         this.add(new Box(0));

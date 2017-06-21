@@ -1,9 +1,14 @@
 package Entities.Interfaces;
 
 /**
- * Créé par Westtunger le 20-06-17.
+ * Explodable Interface.
+ *
+ * @author Nicolas Viseur
+ * @version 1.2
  */
 public interface Explodable {
-    //Interface method are abstract by default
+    /**
+     * Process everything that should be done when the entity explode.
+     */
     void onExplode();
 }

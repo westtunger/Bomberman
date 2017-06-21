@@ -21,7 +21,7 @@ import static Entities.Enum.Direction.*;
  * Playground Class.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 class PlayGround extends JPanel implements ActionListener{
     private final Timer t = new Timer(50,this);
@@ -122,9 +122,12 @@ class PlayGround extends JPanel implements ActionListener{
         repaint();
     }
 
+    /**
+     * Process every inputs contained in the inputs list from the inputListener.
+     */
     private void processInput()
     {
-        for(int code : window.getInputListener().getKeys())
+        for(int code : window.getInputListener().getInputs())
         {
             switch (Key.fromCode(code))
             {
@@ -174,6 +177,9 @@ class PlayGround extends JPanel implements ActionListener{
         }
     }
 
+    /**
+     * Loop trough each entity and call their tick method.
+     */
     private void processTick()
     {
         for(Entity entity : entityManager.getEntities())
@@ -182,6 +188,9 @@ class PlayGround extends JPanel implements ActionListener{
         }
     }
 
+    /**
+     * Process the collision for all the entities.
+     */
     private void processCollision()
     {
         processPlayerCollision();
@@ -191,6 +200,9 @@ class PlayGround extends JPanel implements ActionListener{
         processExplosionCollision();
     }
 
+    /**
+     * Process the collision for the two players.
+     */
     private void processPlayerCollision()
     {
         for(Player player : entityManager.getPlayers())
@@ -211,6 +223,9 @@ class PlayGround extends JPanel implements ActionListener{
         }
     }
 
+    /**
+     * Process the collisions for all the explosions.
+     */
     private void processExplosionCollision()
     {
         for(Explosion explosion : entityManager.getExplosions())
@@ -233,6 +248,9 @@ class PlayGround extends JPanel implements ActionListener{
         }
     }
 
+    /**
+     * Process the collisions for all the bombs
+     */
     private void processBombCollision()
     {
         for(Bomb bomb : EntityManager.getManager().getBombs())
@@ -241,6 +259,10 @@ class PlayGround extends JPanel implements ActionListener{
         }
     }
 
+    /**
+     * Stop the loop, reset the entityManager and show the winner.
+     * @param winner
+     */
     private void endGame(int winner)
     {
         Player.resetNumbers();

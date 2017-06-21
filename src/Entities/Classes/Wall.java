@@ -10,7 +10,7 @@ import java.awt.*;
  * Wall Class.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 public class Wall extends Entity {
 
@@ -37,6 +37,9 @@ public class Wall extends Entity {
         return this.isBreakable;
     }
 
+    /**
+     * Drop a new power up on the ground when the wall is destroyed.
+     */
     private void dropPowerUp()
     {
         int dropPowerUp = (int)(Math.random()*100);

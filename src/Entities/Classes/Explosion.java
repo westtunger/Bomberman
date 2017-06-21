@@ -11,7 +11,7 @@ import java.awt.*;
  * Explosion Class.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 public class Explosion extends Entity {
 

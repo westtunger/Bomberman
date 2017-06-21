@@ -7,7 +7,7 @@ import java.awt.*;
  * Window Class.
  *
  * @author Nicolas Viseur
- * @version 1.0
+ * @version 1.2
  */
 public class Window extends JFrame{
     private static final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -55,6 +55,10 @@ public class Window extends JFrame{
         }
     }
 
+    /**
+     * Return the inputListener bound to the window.
+     * @return The inputListener bound to the window.
+     */
     public InputListener getInputListener()
     {
         return this.inputListener;
