@@ -1,5 +1,7 @@
 package Entities.Classes;
 
+import Entities.EntityManager;
+import Entities.Interfaces.Layers;
 import Entities.SpriteManager;
 
 import java.awt.*;
@@ -10,13 +12,13 @@ import java.awt.*;
  * @author Nicolas Viseur
  * @version 1.0
  */
-public class Wall extends Entity{
+public class Wall extends Entity {
 
     private final boolean isBreakable;
 
     public Wall(boolean breakable, Point pos)
     {
-        super("Wall",pos,0);
+        super("Wall",pos,0, Layers.collidable);
 
         this.isBreakable = breakable;
     }
@@ -40,33 +42,37 @@ public class Wall extends Entity{
         int dropPowerUp = (int)(Math.random()*100);
         int powerUpType = (int)(Math.random()*100);
 
+        //20% of chance to drop a power up
         if(dropPowerUp < 20)
         {
+            //each powerup have about 33% of chance to drop(33%-33%-34%)
             if(powerUpType > 66)
             {
-                new PowerUp(PowerUp.BOMB,this.getPosition());
+                EntityManager.getManager().addEntity(new PowerUp(PowerUp.BOMB,this.getPosition()));
             }
             else if( powerUpType > 33)
             {
-                new PowerUp(PowerUp.POWER,this.getPosition());
+                EntityManager.getManager().addEntity(new PowerUp(PowerUp.POWER,this.getPosition()));
             }
             else
             {
-                new PowerUp(PowerUp.SPEED,this.getPosition());
+                EntityManager.getManager().addEntity(new PowerUp(PowerUp.SPEED,this.getPosition()));
             }
         }
     }
 
     @Override
-    public void destroy()
-    {
-        this.dropPowerUp();
-
-        super.destroy();
+    public Image getImage() {
+        return SpriteManager.getSprite(this.isBreakable() ? 0 : 1,8);
     }
 
     @Override
-    public Image getImage() {
-        return SpriteManager.getSprite(this.isBreakable() ? 0 : 1,8);
+    public void onExplode()
+    {
+        if(this.isBreakable)
+        {
+            this.dropPowerUp();
+            this.destroy();
+        }
     }
 }

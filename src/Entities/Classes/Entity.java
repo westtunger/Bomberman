@@ -2,6 +2,8 @@ package Entities.Classes;
 
 import Entities.EntityManager;
 import Entities.Enum.Direction;
+import Entities.Interfaces.Explodable;
+import Entities.Interfaces.Layers;
 import Visual.Window;
 
 import java.awt.*;
@@ -13,24 +15,20 @@ import java.util.ArrayList;
  * @author Nicolas Viseur
  * @version 1.0
  */
-public abstract class Entity{
+public abstract class Entity implements Layers, Explodable{
     private final int nbAnim;
     private final String name;
     private final Point position;
     private int imageIndex;
-    private static EntityManager entityManager;
+    private static final EntityManager entityManager = EntityManager.getManager();
+    private String layer;
 
-    Entity(String name, Point position, int nbAnim) {
+    Entity(String name, Point position, int nbAnim, String layer) {
         this.name = name;
         this.position = position;
         this.imageIndex = 0;
         this.nbAnim = nbAnim;
-        entityManager.addEntity(this);
-    }
-
-    public static void setEntityManager(EntityManager manager)
-    {
-        entityManager = manager;
+        this.layer = layer;
     }
 
     /**
@@ -166,5 +164,13 @@ public abstract class Entity{
         return false;
     }
 
+    public String getLayer()
+    {
+        return this.layer;
+    }
 
+    public void setLayer(String layer)
+    {
+        this.layer = layer;
+    }
 }

@@ -16,8 +16,19 @@ public class EntityManager {
     private final ArrayList<Player> players;
     private final ArrayList<PowerUp> powerUps;
     private final ArrayList<Wall> walls;
+    private static EntityManager manager;
 
-    public EntityManager(){
+    public static EntityManager getManager()
+    {
+        if(manager == null)
+        {
+            manager = new EntityManager();
+        }
+
+        return manager;
+    }
+
+    private EntityManager(){
         bombs = new ArrayList<>();
         explosions = new ArrayList<>();
         players = new ArrayList<>();
@@ -105,5 +116,14 @@ public class EntityManager {
 
     public ArrayList<Wall> getWalls() {
         return new ArrayList<>(walls);
+    }
+
+    public void clear()
+    {
+        walls.clear();
+        bombs.clear();
+        explosions.clear();
+        powerUps.clear();
+        players.clear();
     }
 }

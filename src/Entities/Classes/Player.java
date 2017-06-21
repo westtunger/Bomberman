@@ -1,6 +1,8 @@
 package Entities.Classes;
 
+import Entities.EntityManager;
 import Entities.Enum.Direction;
+import Entities.Interfaces.Layers;
 import Entities.SpriteManager;
 
 import java.awt.*;
@@ -24,20 +26,14 @@ public class Player extends Entity
     private int power = 1;
     private int speed = 7;
     private final int playerNumber;
-
-    private boolean walkingOnBombs = false;
     private Direction dir = Direction.down;
     private int timer;
 
-    public Player(String name, Point position){
-        super(name,position,8);
+    public Player(String name, Point position) {
+        super(name, position, 8, Layers.collidable);
         nbPlayers++;
-        this.bombs  = new ArrayList<>();
+        this.bombs = new ArrayList<>();
         this.playerNumber = nbPlayers;
-    }
-
-    public boolean isWalkingOnBombs() {
-        return walkingOnBombs;
     }
 
     @Override
@@ -51,14 +47,6 @@ public class Player extends Entity
             if(bomb.isDestroyed())
                 bombs.remove(bomb);
         }
-
-        Entity entity = this.checkCollision();
-
-        if(this.walkingOnBombs)
-            if(entity == null && !(entity instanceof Bomb) && !(bombs.contains(entity)))
-            {
-                this.walkingOnBombs = false;
-            }
     }
 
     /**
@@ -71,8 +59,9 @@ public class Player extends Entity
         {
             timer = 10;
 
-            this.bombs.add(new Bomb(this.power, new Point(this.getPosition())));
-            this.walkingOnBombs = true;
+            Bomb bomb = new Bomb(this.power, new Point(this.getPosition()));
+            this.bombs.add(bomb);
+            EntityManager.getManager().addEntity(bomb);
         }
     }
 
@@ -125,6 +114,8 @@ public class Player extends Entity
                 this.augmentSpeed();
                 break;
         }
+
+        powerUp.onExplode();
     }
 
     /**
@@ -212,5 +203,15 @@ public class Player extends Entity
 
     public ArrayList<Bomb> getBombs() {
         return bombs;
+    }
+
+    @Override
+    public void onExplode() {
+        this.destroy();
+    }
+
+    public int getOtherPlayerNumber()
+    {
+        return this.getPlayerNumber() == 2 ? 1 : 2;
     }
 }

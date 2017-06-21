@@ -2,6 +2,7 @@ package Visual;
 
 import Entities.Classes.*;
 import Entities.EntityManager;
+import Entities.Interfaces.Layers;
 import KeyMapping.Key;
 
 import javax.swing.*;
@@ -29,8 +30,7 @@ class PlayGround extends JPanel implements ActionListener{
 
     public PlayGround(Window window)
     {
-        entityManager = new EntityManager();
-        Entity.setEntityManager(entityManager);
+        entityManager = EntityManager.getManager();
         this.setBackground(Color.lightGray);
         this.window = window;
         this.createLevel();
@@ -81,19 +81,19 @@ class PlayGround extends JPanel implements ActionListener{
                 switch (chr)
                 {
                     case 'X':
-                        new Wall(false,pos);
+                        EntityManager.getManager().addEntity(new Wall(false,pos));
                         break;
 
                     case 'W':
-                        new Wall(true,pos);
+                        EntityManager.getManager().addEntity(new Wall(true,pos));
                         break;
 
                     case 'P':
-                        new Player("p1",pos);
+                        EntityManager.getManager().addEntity(new Player("p1",pos));
                         break;
 
                     case 'C':
-                        new Player("p2",pos);
+                        EntityManager.getManager().addEntity(new Player("p2",pos));
                         break;
                 }
             }
@@ -112,6 +112,7 @@ class PlayGround extends JPanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         processInput();
 
         processTick();
@@ -185,6 +186,8 @@ class PlayGround extends JPanel implements ActionListener{
     {
         processPlayerCollision();
 
+        processBombCollision();
+
         processExplosionCollision();
     }
 
@@ -196,18 +199,13 @@ class PlayGround extends JPanel implements ActionListener{
 
             if(entity != null)
             {
-                if(entity instanceof Wall ||
-                        entity instanceof Player ||
-                        (entity instanceof Bomb  && (!player.getBombs().contains(entity) ||
-                                player.getBombs().contains(entity) && !player.isWalkingOnBombs())))
+                if(entity.getLayer().equals(Layers.collidable))
                 {
                     player.cancelMove();
                 }
-                else if(entity instanceof PowerUp)
+                else if(entity.getLayer().equals(Layers.pickable))
                 {
                     player.pickUpPowerUp((PowerUp) entity);
-
-                    entity.destroy();
                 }
             }
         }
@@ -223,24 +221,32 @@ class PlayGround extends JPanel implements ActionListener{
             {
                 explosion.destroy();
 
-                if(((entity instanceof Wall && ((Wall) entity).isBreakable()) || (entity instanceof PowerUp && !((PowerUp)entity).isInvincible())))
+                String entityClass = entity.getClass().getSimpleName();
+
+                entity.onExplode();
+
+                if(entityClass.equals("Player"))
                 {
-                    entity.destroy();
-                }
-                else if(entity instanceof Bomb)
-                {
-                    ((Bomb) entity).explode();
-                }
-                else if(entity instanceof Player)
-                {
-                    int nb = ((Player)entity).getPlayerNumber() == 2 ? 1 : 2;
-                    entity.destroy();
-                    Player.resetNumbers();
-                    t.stop();
-                    JOptionPane.showMessageDialog(this,"Victoire du joueur "+nb+" !");
-                    window.changePanel(this);
+                    this.endGame(((Player) entity).getOtherPlayerNumber());
                 }
             }
         }
+    }
+
+    private void processBombCollision()
+    {
+        for(Bomb bomb : EntityManager.getManager().getBombs())
+        {
+            bomb.processCollision();
+        }
+    }
+
+    private void endGame(int winner)
+    {
+        Player.resetNumbers();
+        t.stop();
+        EntityManager.getManager().clear();
+        JOptionPane.showMessageDialog(this,"Victoire du joueur "+winner+" !");
+        window.changePanel(this);
     }
 }

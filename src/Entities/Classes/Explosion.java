@@ -1,6 +1,8 @@
 package Entities.Classes;
 
+import Entities.EntityManager;
 import Entities.Enum.Direction;
+import Entities.Interfaces.Layers;
 import Entities.SpriteManager;
 
 import java.awt.*;
@@ -19,7 +21,7 @@ public class Explosion extends Entity {
 
     public Explosion(int power, Direction dir, Point pos)
     {
-        super("Explosion",pos,5);
+        super("Explosion",pos,5, Layers.collidable);
 
         this.power = power;
         this.dir = dir;
@@ -47,7 +49,7 @@ public class Explosion extends Entity {
      */
     private void extend()
     {
-        new Explosion(this.power, this.dir,this.getSpot(this.dir));
+        EntityManager.getManager().addEntity(new Explosion(this.power, this.dir,this.getSpot(this.dir)));
     }
 
     @Override
@@ -59,5 +61,9 @@ public class Explosion extends Entity {
     public Rectangle getBBox()
     {
         return new Rectangle(this.getPosition().x,this.getPosition().y, Visual.Window.getWindowSize().width/20, Visual.Window.getWindowSize().width/20);
+    }
+
+    @Override
+    public void onExplode() {
     }
 }
